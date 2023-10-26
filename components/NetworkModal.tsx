@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import axios from 'axios';
 
 export default function Modal() {
   const [showModal, setShowModal] = useState(false);
@@ -12,11 +12,13 @@ export default function Modal() {
   interface ErrorMessage {
     first: string;
     diagnosis: string;
+    email: string;
   };
 
   const errorMessage: ErrorMessage = {
     first: '',
     diagnosis: '',
+    email: '',
   }
 
   const [formData, setFormData] = useState(initialFormData);
@@ -30,28 +32,57 @@ export default function Modal() {
     });
   };
 
-  const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
-    setErrorMessages(validate(formData));
+  const handleBlur = async (e: React.FocusEvent<HTMLInputElement>) => {
+    setErrorMessages(await validate(formData));
   };
 
   const handleSubmit = async () => {
     console.log('submit')
-    setErrorMessages(validate(formData));
+    setErrorMessages(await validate(formData));
     setThankYou(true)
     setTimeout(() => {
       setShowModal(false);
     }, 10000)
   };
 
-  const validate = (formValues: any) => {
+  const validate = async (formValues: any) => {
     let error: ErrorMessage = {
       first: '',
       diagnosis: '',
+      email: '',
     };
 
     console.log(formValues);
     !formValues.first ? error.first = 'Please enter first name' : error.first = '';
     !formValues.diagnosis ? error.diagnosis = 'Please enter diagnosis' : error.diagnosis = '';
+    if (!formValues.diagnosis) {
+      error.diagnosis = 'Please enter email'
+    } else if (formValues.email) {
+      const axios = require('axios');
+
+      const options = {
+        method: 'GET',
+        url: 'https://mailcheck.p.rapidapi.com/',
+        params: {
+          domain: 'mailinator.com'
+        },
+        headers: {
+          'X-RapidAPI-Key': process.env.NEXT_PUBLIC_RAPIDAPI_KEY,
+          // 'X-RapidAPI-Key': '541ee9bbbdm/she44f2f5067ff118p18e848jsnf0be3ad4badb',
+          'X-RapidAPI-Host': 'mailcheck.p.rapidapi.com'
+        }
+      };
+      
+      try {
+        const response = await axios.request(options);
+        console.log(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    } else {
+      error.diagnosis = '';
+    }
+
     return error;
   };
 

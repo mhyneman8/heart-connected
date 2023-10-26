@@ -33,10 +33,14 @@ export default function Network() {
                     </div>
                 </div> */}
                 <Modal />
-                <div>
-                    <div>Benefits of joining</div>
+                <div
+                    className="drop-shadow-lg w-80 h-80 m-auto px-12 py-8 my-10 rounded bg-white text-center"
+                >
+                    <div className="text-xl text-center mb-10 font-bold">
+                        Benefits of Joining
+                    </div>
                     <ul>
-                        <li>Connect with others in the CHD family</li>
+                        <li className="text-left">Connect with others in the CHD family</li>
                     </ul>
                 </div>
             </div>
