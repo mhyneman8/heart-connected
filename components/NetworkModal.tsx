@@ -3,15 +3,14 @@ import axios from 'axios';
 
 type Props = {
   showModal: boolean,
-  setShowModal: typeof React.useState,
-  content: string,
+  setShowModal: React.Dispatch<React.SetStateAction<boolean>>,
 }
 interface ErrorMessage {
   first: string;
   diagnosis: string;
   email: string;
 };
-export default function NetworkModal({ showModal, setShowModal, content }: Props) {
+export default function NetworkModal({ showModal, setShowModal }: Props) {
   const [thankYou, setThankYou] = useState(false);
   const initialFormData = {
     first: '',
