@@ -29,33 +29,27 @@ export default function Network() {
     return (
         <div>
             <Navigation />
-            <Heading heading="Join Our Community"/>
+            <Heading heading="Join the Heart Connected Community"/>
             <div className="body">
-                {/* <div className="cta w-full text-center my-20">
-                    <div className="rounded-full w-fit m-auto text-white bg-cyan px-10 py-5 hover:opacity-70">
-                        Join Our Community
-                    </div>
-                </div> */}
                 {showModal && (
                     <NetworkModal  showModal={showModal} setShowModal={setShowModal} />
                 )}
-                <button
-                    className="text-white font-bold px-8 py-3 rounded-full m-auto w-fit bg-cyan shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
-                    type='button'
-                    onClick={() => setShowModal(true)}
-                >
-                    Join Our Community
-                </button>
-                {/* <Modal /> */}
-                <div
-                    className="drop-shadow-lg w-80 h-80 m-auto px-12 py-8 my-10 rounded bg-white text-center"
-                >
-                    <div className="text-xl text-center mb-10 font-bold">
-                        Benefits of Joining
-                    </div>
-                    <ul>
-                        <li className="text-left">Connect with others in the CHD family</li>
-                    </ul>
+
+                <div className="h6 w-3/4 m-auto mb-8 text-lg">
+                    Whether you are a person living with Congenital Heart Disease or you love 
+                    someone who does, we&apos;d love to have you as a valued member of our 
+                    community. You’ll be connected to others just like you who enjoy the support, 
+                    education and connection our organization provides. Join us today!
+                </div>
+                <div className="flex justify-center">
+                    <button
+                        className="text-white font-bold px-8 py-3 rounded-full m-auto w-fit bg-cyan shadow hover:shadow-lg outline-none focus:outline-none mb-10"
+                        type='button'
+                        onClick={() => setShowModal(true)}
+                    >
+                        Join Our Community
+                    </button>
+
                 </div>
             </div>
         </div>
