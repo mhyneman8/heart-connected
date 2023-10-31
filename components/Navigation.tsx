@@ -33,14 +33,14 @@ export default function Navigation() {
               <Link href="/about" className="block mt-4 inline-block mt-0 mr-4 hover:underline">
                 About
               </Link>
-              <Link href="/network" className="block mt-4 inline-block mt-0 mr-4 hover:underline">
-                Join Our Network
-              </Link>
-            </div>
-            <div>
-                <Link href="/calculator" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:bg-purple  mt-4 lg:mt-0">
+                <Link href="/calculator" className="block mt-4 inline-block mt-0 mr-4 hover:underline">
                     Calculator
                 </Link>
+            </div>
+            <div>
+              <Link href="/network" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:bg-purple  mt-4 lg:mt-0">
+                Join Our Community
+              </Link>
             </div>
         </div>
         {/* mobile nav */}
@@ -56,13 +56,13 @@ export default function Navigation() {
               <Link href="/about" className="block mt-4 hover:underline">
                 About
               </Link>
-              <Link href="/network" className="block mt-4 hover:underline">
-                Join Our Network
+              <Link href="/calculator" className="block mt-4 hover:underline">
+                  Calculator
               </Link>
             </div>
             <div>
-              <Link href="/calculator" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:bg-purple mt-8">
-                  Calculator
+              <Link href="/network" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:bg-purple mt-8">
+                Join Our Network
               </Link>
             </div>
           </div>
