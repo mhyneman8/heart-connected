@@ -6,10 +6,15 @@ export default function Resources() {
     return (
         <div>
             <Navigation />
-            <Heading heading="Resources" />
+            <Heading heading="Resources for Those With Congenital Heart Disease" />
 
             <div className="body flex flex-col justify-center">
-                <div className="m-auto text-3xl">Safe Websites for Information</div>
+                <div className="m-auto text-xl max-w-lg">
+                    Whether you&apos;ve just received a diagnosis or you&apos;re doing 
+                    continued research, it can be hard to know where to start. We&apos;ve 
+                    compiled our most trusted resources all in one place so you can get 
+                    the most helpful, informative information without searching.
+                </div>
                 <ul className="m-auto mt-4 text-xl">
                     <li>
                         <ExternalLink 
