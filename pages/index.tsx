@@ -17,13 +17,13 @@ export default function Home() {
       <div className="hero h-full min-h-[70vh] flex flex-col justify-center relative">
         <Image src="https://www.ucl.ac.uk/news/sites/news/files/heart_stock_cropped_0.jpg" fill={true} alt="" />
         <div 
-          className="title mx-auto lg:text-6xl md:text-5xl text-4xl max-w-lg text-center text-white px-3 z-10 bg-sky-400/50 rounded" 
+          className="title mx-auto lg:text-6xl md:text-5xl text-4xl max-w-lg lg:max-w-full text-center text-white px-3 z-10 bg-sky-400/50 rounded" 
           style={{ boxShadow: '0 0 10px 26px rgb(56 189 248 / .5)' }}
         >
           Find Community with Heart Connected
         </div>
         <div className='flex justify-center w-full'>
-          <div className="subtitle mx-auto mt-4 lg:text-4xl md:text-2xl max-w-xl text-xl text-white z-10 absolute bottom-3 md:bottom-10 text-center w-full">
+          <div className="subtitle mx-auto mt-4 lg:text-4xl md:text-2xl max-w-xl lg:max-w-full text-xl text-white z-10 absolute bottom-3 md:bottom-10 text-center w-full">
             Helping to bring hope and connection to those affected by congenital heart disease. 
           </div>
         </div>
@@ -60,7 +60,7 @@ export default function Home() {
           </div>
           <div className="h6 w-3/4 m-auto mb-8 text-lg">
             Join our community of families facing similar experiences. 
-            Share support, insights, and find a network of people who 
+            Share support, insights, and find a community of people who 
             understand what you&apos;re going through. By providing your email 
             and city, you&apos;ll gain access to a list of like-minded 
             individuals who are here to lend an empathetic ear and 

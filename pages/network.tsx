@@ -44,7 +44,7 @@ export default function Network() {
                     type='button'
                     onClick={() => setShowModal(true)}
                 >
-                    Join Our Network
+                    Join Our Community
                 </button>
                 {/* <Modal /> */}
                 <div

@@ -123,7 +123,7 @@ export default function NetworkModal({ showModal, setShowModal, content }: Props
                       Thank you {formData.first} for joining us!
                     </div>
                     <div className="content text-lg p-8 mx-10">
-                      You will receive an email shortly with other network members contact information
+                      You will receive an email shortly with other community members contact information
                     </div>
                   </div>
                   ) : (
