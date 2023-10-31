@@ -1,6 +1,8 @@
 import Heading from "@/components/Heading";
 import Navigation from "@/components/Navigation";
-import Modal from "@/components/NetworkModal";
+import NetworkModal from "@/components/NetworkModal";
+import { useState } from "react";
+
 
 
 // command to start mongodb: brew services start mongodb-community
@@ -22,6 +24,8 @@ import Modal from "@/components/NetworkModal";
 // 
 
 export default function Network() {
+    const [showModal, setShowModal] = useState(false);
+
     return (
         <div>
             <Navigation />
@@ -32,7 +36,17 @@ export default function Network() {
                         Join Our Community
                     </div>
                 </div> */}
-                <Modal />
+                {showModal && (
+                    <NetworkModal  showModal={showModal} setShowModal={setShowModal} />
+                )}
+                <button
+                    className="text-white font-bold px-8 py-3 rounded-full m-auto w-fit bg-cyan shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
+                    type='button'
+                    onClick={() => setShowModal(true)}
+                >
+                    Join Our Network
+                </button>
+                {/* <Modal /> */}
                 <div
                     className="drop-shadow-lg w-80 h-80 m-auto px-12 py-8 my-10 rounded bg-white text-center"
                 >
