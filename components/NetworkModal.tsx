@@ -1,19 +1,23 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-export default function Modal() {
-  const [showModal, setShowModal] = useState(false);
+type Props = {
+  showModal: boolean,
+  setShowModal: typeof React.useState,
+  content: string,
+}
+interface ErrorMessage {
+  first: string;
+  diagnosis: string;
+  email: string;
+};
+export default function NetworkModal({ showModal, setShowModal, content }: Props) {
   const [thankYou, setThankYou] = useState(false);
   const initialFormData = {
     first: '',
     diagnosis: '',
   };
 
-  interface ErrorMessage {
-    first: string;
-    diagnosis: string;
-    email: string;
-  };
 
   const errorMessage: ErrorMessage = {
     first: '',
@@ -93,14 +97,7 @@ export default function Modal() {
 
   return (
     <div className='text-center'>
-      <button
-        className="text-white font-bold px-8 py-3 rounded-full m-auto w-fit bg-cyan shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
-        type='button'
-        onClick={() => setShowModal(true)}
-      >
-        Join Our Network
-      </button>
-      {showModal ? (
+      { showModal ? (
         <>
           <div className="opacity-40 bg-black fixed inset-0 z-40"></div>
           <div className="flex justify-center items-center overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
@@ -120,134 +117,87 @@ export default function Modal() {
                     </span>
                   </button>
                 </div>
-               
-                {thankYou ? (
+                { thankYou ? (
                   <div className="message">
-                      <div className="title text-4xl p-5">
-                        Thank you {formData.first} for joining us!
-                      </div>
-                      <div className="content text-lg p-8 mx-10">
-                        You will receive an email shortly with other network members contact information
-                      </div>
+                    <div className="title text-4xl p-5">
+                      Thank you {formData.first} for joining us!
                     </div>
-                ) : (
-                  <>
-                    <div className="relative p-6 flex-auto">
-                      <form className="text-left rounded px-8 pt-6 pb-8 w-full" onSubmit={handleSubmit} >
-                        <span className={errorStyle}>{errorMessages.first}</span>
-                        <label className="block text-black text-sm font-bold mb-2 pl-2">
-                          First Name
-                        </label>
-                        <input
-                          className={inputStyle} 
-                          onChange={handleChange}
-                          onBlur={handleBlur}
-                          value={formData.first}
-                          name="first"
-                          />
-                        <label className={labelStyle} >
-                          Last Name
-                        </label>
-                        <input 
-                          onChange={handleChange}
-                          onBlur={handleBlur} 
-                          className={inputStyle} 
-                          name="last"
-                        />
-                        <span className={errorStyle}>{errorMessages.diagnosis}</span>
-                        <label className={labelStyle}>
-                          Diagnosis
-                        </label>
-                        <input 
-                          onChange={handleChange}
-                          onBlur={handleBlur} 
-                          className={inputStyle} 
-                          value={formData.diagnosis}
-                          name="diagnosis"
-                        />
-                        <label className={labelStyle}>
-                          City
-                        </label>
-                        <input 
-                          onChange={handleChange}
-                          onBlur={handleBlur} 
-                          className={inputStyle} 
-                          name="city"
-                        />
-                      </form>
+                    <div className="content text-lg p-8 mx-10">
+                      You will receive an email shortly with other network members contact information
                     </div>
-                    
-                  <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
-                    <button
-                      className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1"
-                      type="button"
-                      onClick={() => setShowModal(false)}
-                    >
-                      Close
-                    </button>
-                    <button
-                      className="text-white bg-yellow-500 active:bg-yellow-700 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
-                      type="button"
-                      onClick={() => handleSubmit()}
-                    >
-                      Submit
-                    </button>
                   </div>
-                  </>
-                )}
+                  ) : (
+                    <>
+                      <div className="relative p-6 flex-auto">
+                        <form className="text-left rounded px-8 pt-6 pb-8 w-full" onSubmit={handleSubmit} >
+                          <span className={errorStyle}>{errorMessages.first}</span>
+                          <label className="block text-black text-sm font-bold mb-2 pl-2">
+                            First Name
+                          </label>
+                          <input
+                            className={inputStyle} 
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            value={formData.first}
+                            name="first"
+                          />
+                          <label className={labelStyle} >
+                            Last Name
+                          </label>
+                          <input 
+                            onChange={handleChange}
+                            onBlur={handleBlur} 
+                            className={inputStyle} 
+                            name="last"
+                          />
+                          <span className={errorStyle}>{errorMessages.diagnosis}</span>
+                          <label className={labelStyle}>
+                            Diagnosis
+                          </label>
+                          <input 
+                            onChange={handleChange}
+                            onBlur={handleBlur} 
+                            className={inputStyle} 
+                            value={formData.diagnosis}
+                            name="diagnosis"
+                          />
+                          <label className={labelStyle}>
+                            City
+                          </label>
+                          <input 
+                            onChange={handleChange}
+                            onBlur={handleBlur} 
+                            className={inputStyle} 
+                            name="city"
+                          />
+                        </form>
+                      </div>
+                  
+                      <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
+                        <button
+                          className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1"
+                          type="button"
+                          onClick={() => setShowModal(false)}
+                        >
+                          Close
+                        </button>
+                        <button
+                          className="text-white bg-yellow-500 active:bg-yellow-700 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
+                          type="button"
+                          onClick={() => handleSubmit()}
+                        >
+                          Submit
+                        </button>
+                      </div>
+                    </>
+                  )
+                }
               </div>
             </div>
           </div>
         </>
-      ) : null}
+      ) : null }
     </div>
   )
 }
 
-
-// export default function Modal() {
-
-    
-//     // el.addEventListener('click', (e) => {
-//     //   if ((e.target as HTMLElement).getAttribute('data-dismiss') === 'modal') {
-//     //     e.preventDefault();
-//     //     close();
-//     //   }
-//     // });
-    
-//     // const open = () => {
-//     //   document.documentElement.style.overflow = 'hidden'; // lock scrolling
-//     //   el.classList.add('is-active');
-//     // }
-    
-//     // const close = () => {
-//     //   document.documentElement.style.overflow = 'visible';
-//     //   el.classList.remove('is-active');
-//     // }
-
-//     // return (
-//     //     <div 
-//     //         className="network"
-//     //         tabIndex={-1}
-//     //         role='dialog'
-//     //         aria-labelledby='modal-label'
-//     //         aria-modal='true'
-//     //         aria-hidden='true'
-//     //     >
-//     //       <div className='network__backdrop bg-fixed top-0 left-0 right-0 bottom-0 w-full h-full z-50 overflow-hidden flex items-center justify-center' data-dismiss="modal"></div>
-//     //       <section className='network__inner'>
-//     //         {/* <button type="button" className={styles.network__close-icon} title="Close" data-dismiss="modal" aria-label="Close dialog"></button> */}
-//     //         <div className='network__header'>
-//     //           <h1>Modal Header</h1>
-//     //         </div>
-//     //         <div className='network__content'>
-//     //           Modal Content
-//     //         </div>
-//     //         <div className='network__footer'>
-//     //           Modal Footer
-//     //         </div>
-//     //       </section>
-//     //     </div>
-//     // )
-
-// }
