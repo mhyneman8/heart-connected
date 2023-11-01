@@ -11,7 +11,7 @@ interface ErrorMessage {
   email: string;
 };
 export default function NetworkModal({ showModal, setShowModal }: Props) {
-  const [thankYou, setThankYou] = useState(false);
+  const [thankYou, setThankYou] = useState<boolean>(false);
   const initialFormData = {
     first: '',
     diagnosis: '',

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useState } from 'react';
 
 export default function Navigation() {
-  const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);
 
   const handleNavOpen = () => {
     setMobileNavOpen(!mobileNavOpen);

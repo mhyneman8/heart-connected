@@ -4,12 +4,11 @@ import Navigation from '@/components/Navigation';
 import Link from 'next/link';
 import NetworkModal from '@/components/NetworkModal';
 import VideoSection from '@/components/VideoSection';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 
 export default function Home() {
-  const [showModal, setShowModal] = useState(false);
-
+  const [showModal, setShowModal] = React.useState<boolean>(false);
 
   return (
     <div id="home">

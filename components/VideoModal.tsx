@@ -4,7 +4,7 @@ import YouTubePlayer from '@/components/YouTubePlayer';
 
 type Props = {
   // showVideo: boolean,
-  setShowVideo: typeof React.useState,
+  setShowVideo: React.Dispatch<React.SetStateAction<boolean>>,
   content: string,
   video: string,
   title?: string,

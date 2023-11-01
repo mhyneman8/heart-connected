@@ -1,20 +1,20 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import VideoModal from '@/components/VideoModal';
 
 export default function VideoSection() {
-    const [showVideo, setShowVideo] = useState(false);
-    const [showVideo1, setShowVideo1] = useState(false);
-    const [showVideo2, setShowVideo2] = useState(false);
+    const [showVideo, setShowVideo] = React.useState<boolean>(false);
+    const [showVideo1, setShowVideo1] = React.useState<boolean>(false);
+    const [showVideo2, setShowVideo2] = React.useState<boolean>(false);
     return (
         <>
             {showVideo && (
-            <VideoModal setShowVideo={setShowVideo} videoId={"Mv4VemH-bz0"} />
+            <VideoModal setShowVideo={setShowVideo} content={''} video={"Mv4VemH-bz0"} />
             )}
             {showVideo1 && (
-            <VideoModal setShowVideo={setShowVideo1} videoId={"-cEfxl_2xLw"} />
+            <VideoModal setShowVideo={setShowVideo1} content={''} video={"-cEfxl_2xLw"} />
             )}
             {showVideo2 && (
-            <VideoModal setShowVideo={setShowVideo2} videoId={"I9Rmys6HnEE"} />
+            <VideoModal setShowVideo={setShowVideo2} content={''} video={"I9Rmys6HnEE"} />
             )}
             <div className="video-wrapper flex flex-col justify-center lg:flex-row mb-8">
             <div className="video m-auto my-5 w-1/2 hover:cursor-pointer">
