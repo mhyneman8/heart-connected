@@ -3,12 +3,6 @@ import Navigation from '@/components/Navigation';
 import ExternalLink from '@/components/ExternalLink';
 import ImageNext from 'next/image';
 import resources from '../content/resources';
-// import aha from '../assets/AHA_icon.svg';
-// import cdc from '../assets/cdc.svg';
-// import lch from '../assets/';
-// import ohhf from '../assets/OHHF_Navy_01.png';
-// import sh from '../assets/standford-logo.png';
-// import mh from '../assets/R-Logo-TheMendedHeartsInc-BlackFont-Horizontal-1.png';
 
 export default function Resources() {
 	return (
