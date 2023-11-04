@@ -1,59 +1,56 @@
-import Heading from "@/components/Heading";
-import Navigation from "@/components/Navigation";
-import ExternalLink from "@/components/ExternalLink";
+import Heading from '@/components/Heading';
+import Navigation from '@/components/Navigation';
+import ExternalLink from '@/components/ExternalLink';
+import ImageNext from 'next/image';
+import resources from '../content/resources';
+// import aha from '../assets/AHA_icon.svg';
+// import cdc from '../assets/cdc.svg';
+// import lch from '../assets/';
+// import ohhf from '../assets/OHHF_Navy_01.png';
+// import sh from '../assets/standford-logo.png';
+// import mh from '../assets/R-Logo-TheMendedHeartsInc-BlackFont-Horizontal-1.png';
 
 export default function Resources() {
-    return (
-        <div>
-            <Navigation />
-            <Heading heading="Resources for Those With Congenital Heart Disease" />
+	return (
+		<div>
+			<Navigation />
+			<Heading heading='Resources for Those With Congenital Heart Disease' />
 
-            <div className="body flex flex-col justify-center">
-                <div className="m-auto text-xl max-w-lg">
-                    Whether you&apos;ve just received a diagnosis or you&apos;re doing 
-                    continued research, it can be hard to know where to start. We&apos;ve 
-                    compiled our most trusted resources all in one place so you can get 
-                    the most helpful, informative information without searching.
-                </div>
-                <ul className="m-auto mt-4 text-xl">
-                    <li>
-                        <ExternalLink 
-                            link="https://www.heart.org/en/health-topics/congenital-heart-defects/about-congenital-heart-defects" 
-                            name="American Heart Association"
-                        />
-                    </li>
-                    <li>
-                        <ExternalLink 
-                            link="https://www.cdc.gov/ncbddd/heartdefects/index.html" 
-                            name="Center for Disease Control and Prevention"
-                        />
-                    </li>
-                    <li>
-                        <ExternalLink 
-                            link="https://www.luriechildrens.org/en/specialties-conditions/complex-congenital-heart-disease-care-center/" 
-                            name="Lurie Children&apos;s Hospital"
-                        />
-                    </li>
-                    <li>
-                        <ExternalLink 
-                            link="https://www.stanfordchildrens.org/en/topic/default?id=congenital-heart-disease-90-P02346" 
-                            name="Standford Children&apos;s Hospital"
-                        />
-                    </li>
-                    <li>
-                        <ExternalLink 
-                            link="https://mendedhearts.org/" 
-                            name="Mended Hearts"
-                        />
-                    </li>
-                    <li>
-                        <ExternalLink 
-                            link="https://theohhf.org/" 
-                            name="Ollie Hinkle Heart Foundation"
-                        />
-                    </li>
-                </ul>
-            </div>
-        </div>
-    )
+			<div className='body flex flex-col justify-center mb-8'>
+				<div className='m-auto text-xl max-w-lg'>
+					Whether you&apos;ve just received a diagnosis or you&apos;re doing
+					continued research, it can be hard to know where to start. We&apos;ve
+					compiled our most trusted resources all in one place so you can get
+					the most helpful, informative information without searching.
+				</div>
+				<ul className='m-auto mt-4 text-xl flex justify-center flex-col max-w-[60%]'>
+					{resources.map((resource) => (
+						<li key={resource.key}>
+							<div className='flex col items-center'>
+								<ImageNext
+									src={resource.imgSrc}
+									alt={resource.text}
+									width={resource.width}
+									height={resource.height}
+									className='mr-2'
+								/>
+								<ExternalLink
+									link={resource.link}
+									name={resource.text}
+								/>
+							</div>
+							<div className='ml-6 text-sm mb-5'>{resource.description}</div>
+						</li>
+					))}
+				</ul>
+			</div>
+
+			<div className='mb-5 max-w-[65%] flex-col justify-center m-auto'>
+				Can&apos;t find what you&apos;re looking for? Have a specific question?{' '}
+				<br></br>
+				Email us: <a href=''>connected.hearts@gmail.com</a>, or go to
+				<a href=''> our forum</a>
+			</div>
+		</div>
+	);
 }
