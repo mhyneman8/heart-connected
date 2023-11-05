@@ -16,10 +16,15 @@ import {
 	updateDoc,
 	arrayUnion,
 } from '@firebase/firestore';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, ReactEventHandler } from 'react';
 import ForumAccordion from './ForumAccordion';
 
 const collection_name = 'forums';
+
+type Forum = {
+	Title: string;
+	Comment: string;
+};
 
 export default function Forum() {
 	const [loading, setLoading] = useState(true);
@@ -27,15 +32,15 @@ export default function Forum() {
 	const [newForum, setNewForum] = useState('');
 	const [newComment, setNewComment] = useState('');
 
-	const handleFormInputChange = (e) => {
-		setNewForum(e.target.value);
+	const handleFormInputChange = (e: Event) => {
+		setNewForum((e.target as HTMLInputElement).value);
 	};
-	const handleCommentInputChange = (e) => {
-		setNewComment(e.target.value);
+	const handleCommentInputChange = (e: Event) => {
+		setNewComment((e.target as HTMLInputElement).value);
 	};
 
 	// add item to database
-	const addForum = async (e) => {
+	const addForum = async (e: Event) => {
 		e.preventDefault();
 		if (newForum !== '') {
 			// setForums([...forums, newComment])
@@ -87,7 +92,7 @@ export default function Forum() {
 	useEffect(() => {
 		const q = query(collection(db, collection_name));
 		const unsubscribe = onSnapshot(q, (QuerySnapshot) => {
-			let forumsArr = [];
+			let forumsArr: any = [];
 			QuerySnapshot.forEach((doc) => {
 				forumsArr.push({ ...doc.data(), id: doc.id });
 			});
@@ -102,7 +107,7 @@ export default function Forum() {
 
 	// delete items from database
 	// create delete button. onclick
-	const deleteItem = async (id) => {
+	const deleteItem = async (id: string) => {
 		await deleteDoc(doc(db, collection_name, id));
 	};
 
@@ -116,7 +121,6 @@ export default function Forum() {
 				<div className='text-center text-white font-bold text-2xl mx-auto w-full bg-purple rounded-t-2xl p-4'>
 					Forums
 				</div>
-				{/* {findAll()} */}
 				{loading ? (
 					<div className='mx-auto w-3/4'>
 						<h2>Loading...</h2>
@@ -130,7 +134,7 @@ export default function Forum() {
 					</div>
 				) : (
 					<div className='mx-auto w-full bg-indigo rounded-b-2xl p-6'>
-						{forums.map((forum, id) => (
+						{forums.map((forum: Forum, id) => (
 							<div key={id}>
 								<ForumAccordion
 									title={forum.Title}
@@ -145,7 +149,7 @@ export default function Forum() {
 				)}
 				<div className='m-auto w-3/4 mt-5 flex flex-col justify-center'>
 					<form
-						onSubmit={addForum}
+						// onSubmit={addForum}
 						className='m-auto flex flex-col justify-center'
 					>
 						<label
@@ -156,13 +160,18 @@ export default function Forum() {
 							<input
 								type='text'
 								value={newForum}
-								onChange={handleFormInputChange}
+								onChange={() => handleFormInputChange}
 								className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
 								id='topic'
 								placeholder='Topic'
 							/>
 						</label>
-						<button type='submit'>Submit</button>
+						<button
+							onClick={() => addForum}
+							type='submit'
+						>
+							Submit
+						</button>
 					</form>
 				</div>
 			</div>
