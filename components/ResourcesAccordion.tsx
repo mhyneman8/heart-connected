@@ -2,7 +2,22 @@ import { useState } from 'react';
 import ExternalLink from '@/components/ExternalLink';
 import ImageNext from 'next/image';
 
-export default function ForumAccordion(props) {
+type Content = {
+	key: string;
+	imgSrc: string;
+	text: string;
+	width: number;
+	height: number;
+	link: string;
+	description: string;
+};
+
+type Props = {
+	title: string;
+	content: any;
+};
+
+export default function ResourceAccordion(props: Props) {
 	const [isShowing, setIsShowing] = useState(false);
 
 	const toggle = () => {
@@ -45,7 +60,7 @@ export default function ForumAccordion(props) {
 				className='bg-white rounded-b-xl p-6 text-black shadow-lg'
 			>
 				<ul className='m-auto mt-4 text-xl flex justify-center flex-col px-3'>
-					{props.content.map((resource) => (
+					{props.content.map((resource: Content) => (
 						<li key={resource.key}>
 							<div className='flex col items-center'>
 								{resource.imgSrc && (

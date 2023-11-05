@@ -1,6 +1,14 @@
 import { useState } from 'react';
 
-export default function ForumAccordion(props) {
+type Props = {
+	title: string;
+	content: string;
+	addComment: any;
+	newComment: string;
+	handleCommentInputChange: any;
+};
+
+export default function ForumAccordion(props: Props) {
 	const [isShowing, setIsShowing] = useState(false);
 
 	const toggle = () => {
