@@ -133,7 +133,11 @@ export default function Learn() {
 					After complete chamber differentiation and septum formation, the
 					outflow tracts (i.e., aorta and pulmonary arteries) develop and this
 					is where defects including{' '}
-					<Tooltip text='Transposition of the great arteries is a severe lesion that occurs when the aorta (leads to body) and the pulmonary artery (leads to lungs) are attached to the wrong ventricle.This means the body and the lungs circulations are separated from each other and oxygen-rich blood cannot reach other organs. There are other types of TGA, which sees the ventricles transposed while the arteries are in appropriate placement, and while this sounds better it can lead to its own host of issues.'>
+					<Tooltip
+						image=''
+						imgAlt=''
+						text='Transposition of the great arteries is a severe lesion that occurs when the aorta (leads to body) and the pulmonary artery (leads to lungs) are attached to the wrong ventricle.This means the body and the lungs circulations are separated from each other and oxygen-rich blood cannot reach other organs. There are other types of TGA, which sees the ventricles transposed while the arteries are in appropriate placement, and while this sounds better it can lead to its own host of issues.'
+					>
 						transposition of the great arteries (TGA)
 					</Tooltip>
 					,{' '}

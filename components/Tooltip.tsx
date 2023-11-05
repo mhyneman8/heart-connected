@@ -11,7 +11,7 @@ type Props = {
 	children: any;
 };
 
-function Tooltip(props) {
+function Tooltip(props: Props) {
 	const { text, image, image2, imgAlt, img2Alt, children } = props;
 	return (
 		<div className={styles.tooltip}>
@@ -28,7 +28,7 @@ function Tooltip(props) {
 					className=''
 				/>
 				<span>{text}</span>
-				{image2 && (
+				{image2 && img2Alt && (
 					<Image
 						src={image2}
 						width={150}
