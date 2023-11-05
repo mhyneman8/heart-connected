@@ -2,7 +2,9 @@ import Heading from '@/components/Heading';
 import Navigation from '@/components/Navigation';
 import ExternalLink from '@/components/ExternalLink';
 import ImageNext from 'next/image';
-import resources from '../content/resources';
+import resources from '@/content/resources';
+import Link from 'next/link';
+import ResourcesAccordion from '@/components/ResourcesAccordion';
 
 export default function Resources() {
 	return (
@@ -12,31 +14,54 @@ export default function Resources() {
 
 			<div className='body flex flex-col justify-center mb-8'>
 				<div className='m-auto text-xl max-w-lg'>
-					Whether you&apos;ve just received a diagnosis or you&apos;re doing
-					continued research, it can be hard to know where to start. We&apos;ve
-					compiled our most trusted resources all in one place so you can get
-					the most helpful, informative information without searching.
+					It can be overwhelming when scouring the internet for information
+					regarding congenital heart disease. If you are interested in learning
+					more about CHD and the development of the heart, in general please{' '}
+					<Link
+						className='underline text-purple hover:text-teal'
+						href='/learn'
+					>
+						visit our learn section
+					</Link>
+					. Also below are high-quality resources which may contain more
+					information regarding your child’s specific lesion. It should be noted
+					that if you ever have questions, you should feel comfortable reaching
+					out to your provider.
 				</div>
-				<ul className='m-auto mt-4 text-xl flex justify-center flex-col max-w-[60%]'>
-					{resources.map((resource) => (
-						<li key={resource.key}>
-							<div className='flex col items-center'>
-								<ImageNext
-									src={resource.imgSrc}
-									alt={resource.text}
-									width={resource.width}
-									height={resource.height}
-									className='mr-2'
-								/>
-								<ExternalLink
-									link={resource.link}
-									name={resource.text}
-								/>
-							</div>
-							<div className='ml-6 text-sm mb-5'>{resource.description}</div>
-						</li>
-					))}
-				</ul>
+				<div className='m-auto text-xl max-w-lg text-sm my-4'>
+					Taking care of a health child is a challenging and emotionally taxing
+					task. Caring for a sick child with CHD can make the struggles even
+					harder. Despite advancements in medical and surgical management of
+					kids with CHD, certain defects still have high infant mortality rates
+					and those that survive may still spend months in the hospital during
+					their first year of life or beyond. It is important to consider what
+					you are comfortable or prepared to handle. If you do not believe this
+					is the right time or situation, please do not hesitate to talk with
+					you provider or{' '}
+					<Link
+						className='underline text-purple hover:text-teal'
+						href='https://www.plannedparenthood.org/'
+					>
+						visit Planned Parenthood.
+					</Link>{' '}
+					It is a difficult decision and there is no right answer. You deserve
+					to have all the information and the non-judgemental support network to
+					help you make the right choice.
+				</div>
+
+				<div className='mx-auto w-full bg-indigo rounded-b-2xl p-6'>
+					<div className='text-white text-bold text-3xl pb-3'>Resources</div>
+					<div>
+						<ResourcesAccordion
+							title='Socioemotional Resources'
+							content={resources.socio}
+						/>
+						<ResourcesAccordion
+							title='Education Content'
+							content={resources.educ}
+						/>
+					</div>
+				</div>
 			</div>
 
 			<div className='mb-5 max-w-[65%] flex-col justify-center m-auto'>
