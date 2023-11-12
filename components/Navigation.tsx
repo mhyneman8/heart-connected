@@ -1,4 +1,5 @@
 // import config from "@/tailwind.config";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from 'react';
 
@@ -11,9 +12,14 @@ export default function Navigation() {
   return (
       <nav className="flex z-30 items-center fixed top-0 left-0 right-0 rounded-b-md justify-between flex-wrap bg-gradient-to-r from-cyan from-20% via-indigo via-70% to-purple to-100% p-6">
         <div className="flex items-center flex-shrink-0 text-white mr-6">
-          {/* <svg className="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"/></svg> */}
           <Link href="/">
-              <span className="font-semibold text-xl tracking-tight">logo</span>
+            <Image
+              src='/logoqrs/Logo.png'
+              width={60}
+              height={60}
+              alt='Living with CHD'
+              className='rounded-full absolute top-2'
+            /> 
           </Link>
         </div>
         <div className="block">
