@@ -10,7 +10,7 @@ export default function About() {
 	return (
 		<div>
 			<Navigation />
-			<Heading heading='About Heart Connected' />
+			<Heading imgSrc={'/pics/hand-heart.jpg'} heading='About Heart Connected' />
 			<div className='body flex flex-col justify-center mb-10'>
 				{aboutContent.map((section, index) => (
 					<div
@@ -25,7 +25,6 @@ export default function About() {
 				<div className='flex flex-col justify-center'>
 					{showModal && (
 						<NetworkModal
-							showModal={showModal}
 							setShowModal={setShowModal}
 						/>
 					)}

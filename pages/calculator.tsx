@@ -6,7 +6,7 @@ export default function Calculator() {
         <div>
             <Navigation />
 
-            <Heading heading="Calculator" />
+            <Heading imgSrc={'/pics/Strength_connection.jpg'} heading="Calculator" />
         </div>
     )
 }

@@ -14,7 +14,7 @@ export default function Home() {
 			<Navigation />
 			<div className='hero h-full min-h-[70vh] flex flex-col justify-center relative'>
 				<Image
-					src='https://www.ucl.ac.uk/news/sites/news/files/heart_stock_cropped_0.jpg'
+					src='/pics/paint-heart.jpg'
 					fill={true}
 					alt=''
 				/>
@@ -48,7 +48,7 @@ export default function Home() {
 			</div>
 
 			<div className='body flex justify-center flex-col'>
-				<div className='h2 w-100 m-auto text-6xl mt-20 mb-8'>
+				<div className='h2 w-100 m-auto text-6xl mt-20 mb-8 text-center'>
 					A community with heart
 				</div>
 				<VideoSection />
@@ -56,7 +56,6 @@ export default function Home() {
 				<div className='cta w-full text-center my-12'>
 					{showModal && (
 						<NetworkModal
-							showModal={showModal}
 							setShowModal={setShowModal}
 						/>
 					)}

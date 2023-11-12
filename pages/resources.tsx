@@ -5,12 +5,13 @@ import ImageNext from 'next/image';
 import resources from '@/content/resources';
 import Link from 'next/link';
 import ResourcesAccordion from '@/components/ResourcesAccordion';
+import Image from 'next/image';
 
 export default function Resources() {
 	return (
 		<div>
 			<Navigation />
-			<Heading heading='Resources for Those With Congenital Heart Disease' />
+			<Heading imgSrc={'/pics/Therapy_Resources.jpg'} heading='Resources for Those With Congenital Heart Disease' />
 
 			<div className='body flex flex-col justify-center mb-8'>
 				<div className='m-auto text-xl max-w-lg'>
@@ -24,7 +25,7 @@ export default function Resources() {
 						visit our learn section
 					</Link>
 					. Also below are high-quality resources which may contain more
-					information regarding your child’s specific lesion. It should be noted
+					information regarding your child&apos;s specific lesion. It should be noted
 					that if you ever have questions, you should feel comfortable reaching
 					out to your provider.
 				</div>
@@ -49,7 +50,7 @@ export default function Resources() {
 					help you make the right choice.
 				</div>
 
-				<div className='mx-auto w-full bg-indigo rounded-b-2xl p-6'>
+				<div className='mx-auto mt-10 w-full bg-indigo rounded-b-2xl p-6'>
 					<div className='text-white text-bold text-3xl pb-3'>Resources</div>
 					<div>
 						<ResourcesAccordion

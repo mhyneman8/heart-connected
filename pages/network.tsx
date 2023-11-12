@@ -3,6 +3,7 @@ import Navigation from '@/components/Navigation';
 import NetworkModal from '@/components/NetworkModal';
 import { useState } from 'react';
 import Forum from '@/components/Forum';
+import Image from 'next/image';
 
 // command to start mongodb: brew services start mongodb-community
 // command to stop mongoDB: brew services stop mongodb-community
@@ -22,17 +23,18 @@ import Forum from '@/components/Forum';
 // delete multiple collections: db.[collectionName].deleteMany({ "Genre.Name": "Comedy" })
 //
 
+// Mural can be found on the corner of Irving Park and Francisco in the Albany Park neighborhood of Chicago. All credit goes to Christian Paz.
+
 export default function Network() {
 	const [showModal, setShowModal] = useState(false);
 
 	return (
 		<div>
 			<Navigation />
-			<Heading heading='Join the Heart Connected Community' />
+			<Heading imgSrc={'/pics/Strength_connection.jpg'} heading='Join the Heart Connected Community' />
 			<div className='body'>
 				{showModal && (
 					<NetworkModal
-						showModal={showModal}
 						setShowModal={setShowModal}
 					/>
 				)}
