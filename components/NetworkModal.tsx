@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 type Props = {
-  showModal: boolean,
+  // showModal: boolean,
   setShowModal: React.Dispatch<React.SetStateAction<boolean>>,
 }
 interface ErrorMessage {
@@ -10,7 +10,7 @@ interface ErrorMessage {
   diagnosis: string;
   email: string;
 };
-export default function NetworkModal({ showModal, setShowModal }: Props) {
+export default function NetworkModal({ setShowModal }: Props) {
   const [thankYou, setThankYou] = useState<boolean>(false);
   const initialFormData = {
     first: '',
@@ -96,7 +96,7 @@ export default function NetworkModal({ showModal, setShowModal }: Props) {
 
   return (
     <div className='text-center'>
-      { showModal ? (
+      {/* { showModal ? ( */}
         <>
           <div className="opacity-40 bg-black fixed inset-0 z-40"></div>
           <div className="flex justify-center items-center overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
@@ -195,7 +195,7 @@ export default function NetworkModal({ showModal, setShowModal }: Props) {
             </div>
           </div>
         </>
-      ) : null }
+      {/* // ) : null } */}
     </div>
   )
 }

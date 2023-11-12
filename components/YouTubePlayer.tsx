@@ -1,35 +1,20 @@
 import React from 'react';
-import YouTube, { YouTubeProps } from 'react-youtube';
 
 type Video = {
     videoId: string;
 }
 
 export default function YouTubePlayer({ videoId }: Video) {
-    const onPlayerReady: YouTubeProps['onReady'] = (event) => {
-        const player = event.target;
-
-        player.pauseVideo();
-    };
-
-    const opts: YouTubeProps['opts'] = {
-        height: '100%',
-        width: '100%',
-        playerVars: {
-            // autoplay: 0,
-        },
-    };
-
-    const onError = (error: unknown) => {
-        console.error('YouTube Player Error:', error);
-    };
+    const url = 'https://www.youtube.com/embed/' + videoId;
 
     return (
-        <YouTube
-            videoId={videoId}
-            opts={opts}
-            onReady={onPlayerReady}
-            onError={onError}
+        <iframe 
+            width="560" 
+            height="315" 
+            src={url}
+            frameBorder="0" 
+            allow="data-allow" 
+            allowFullScreen
         />
     );
 };
