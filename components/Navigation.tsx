@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 export default function Navigation() {
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);
-
+  const desktopItemsStyle = 'block inline-block mt-0 mr-4 hover:underline';
   const handleNavOpen = () => {
     setMobileNavOpen(!mobileNavOpen);
   }
@@ -29,18 +29,18 @@ export default function Navigation() {
         </div>
         {/* desktop nav */}
         <div id='desktop-menu-items' className="ml-8 flex-grow hidden lg:flex items-center w-auto text-white">
-            <div className="text-sm lg:flex-grow">
-              <Link href="/resources" className="block mt-4 inline-block mt-0 mr-4 hover:underline">
+            <div className="text-md lg:flex-grow ml-8">
+              <Link href="/resources" className={desktopItemsStyle}>
                 Resources
               </Link>
-              <Link href="/learn" className="block mt-4 inline-block mt-0 mr-4 hover:underline">
+              <Link href="/learn" className={desktopItemsStyle}>
                 Learn
               </Link>
-              <Link href="/about" className="block mt-4 inline-block mt-0 mr-4 hover:underline">
+              <Link href="/about" className={desktopItemsStyle}>
                 About
               </Link>
-                <Link href="/calculator" className="block mt-4 inline-block mt-0 mr-4 hover:underline">
-                    Calculator
+                <Link href="/calculator" className={desktopItemsStyle}>
+                    Calculate Risk Level
                 </Link>
             </div>
             <div>
@@ -52,7 +52,7 @@ export default function Navigation() {
         {/* mobile nav */}
         {mobileNavOpen && (
           <div id='mobile-menu-items' className="w-full flex flex-col text-end flex-grow text-white lg:hidden">
-            <div className="text-sm">
+            <div className="text-md">
               <Link href="/resources" className="block mt-4 hover:underline">
                 Resources
               </Link>
@@ -63,7 +63,7 @@ export default function Navigation() {
                 About
               </Link>
               <Link href="/calculator" className="block mt-4 hover:underline">
-                  Calculator
+                  Calculate Risk Level
               </Link>
             </div>
             <div>
