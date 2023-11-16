@@ -1,20 +1,9 @@
 import { db } from '../firebase/clientApp';
 import {
-	getDocs,
 	collection,
-	// collection,
-	QuerySnapshot,
-	QueryDocumentSnapshot,
-	DocumentData,
 	query,
-	// where,
-	// limit,
-	deleteDoc,
-	doc,
 	addDoc,
 	onSnapshot,
-	updateDoc,
-	arrayUnion,
 } from '@firebase/firestore';
 import { useState, useEffect, ReactEventHandler } from 'react';
 import ForumAccordion from './ForumAccordion';
@@ -22,94 +11,58 @@ import ForumAccordion from './ForumAccordion';
 const collection_name = 'forums';
 
 type Forum = {
-	Title: string;
-	Comment: string;
+	question: string;
+	comments: Array<string>;
+	id: string;
 };
 
 export default function Forum() {
 	const [loading, setLoading] = useState(true);
 	const [forums, setForums] = useState([]);
 	const [newForum, setNewForum] = useState('');
-	const [newComment, setNewComment] = useState('');
 
-	const handleFormInputChange = (e: Event) => {
-		setNewForum((e.target as HTMLInputElement).value);
-	};
-	const handleCommentInputChange = (e: Event) => {
-		setNewComment((e.target as HTMLInputElement).value);
-	};
 
 	// add item to database
-	const addForum = async (e: Event) => {
+	const addForum = async (e: any) => {
 		e.preventDefault();
+
 		if (newForum !== '') {
-			// setForums([...forums, newComment])
-			await addDoc(collection(db, collection_name), {
-				Title: newForum.trim(),
+			await addDoc(collection(db, 'forums'), {
+				question: newForum.trim(),
+				comments: [],
 			});
-			setNewForum('');
 		}
+
 	};
 
-	// const updateUser = async (id, updates) => {
-	// 	await firestore.collection('forums').doc(id).update(updates);
-	// 	const doc = await Firestore.collection('forums').doc(id).get();
-
-	// 	const user = {
-	// 		id: doc.id,
-	// 		...doc.data(),
-	// 	};
-	// 	console.log(user);
-	// 	return user;
-	// };
-
-	// add comment to forum question
-	const addComment = async (title: string) => {
-		// e.preventDefault();
-		let index = 0;
-		if (newComment !== '') {
-			// where Title === title
-			// loop through until Comment[index] doesn't exist
-			// if Comment${index} exists {
-			//     index ++
-			// }
-			// if ()
-			const forumRef = doc(
-				db,
-				'forums',
-				'I just got a diagnosis, what do I do now?'
-			);
-			console.log('comment', newComment);
-			console.log('forumRef', forumRef);
-			await updateDoc(forumRef, {
-				Comment2: newComment.trim(),
-			});
-			// setNewComment('');
-		}
-	};
+	// 	const forumDocuments = await getDocs(collection(db, 'forums'));
+	// 	let newForum = [];
+	// 	forumDocuments.forEach(docObject => {
+	// 		newForum.push({ id: docObject.id, ...docObject.data()})
+	// 	})
+	// 	setForums(newForum)
+	// 	console.log(forums)
+	// } 
 
 	// read items from database
 	useEffect(() => {
 		const q = query(collection(db, collection_name));
-		const unsubscribe = onSnapshot(q, (QuerySnapshot) => {
+		const unsubscribe = onSnapshot(q, (documentSnapshot) => {
 			let forumsArr: any = [];
-			QuerySnapshot.forEach((doc) => {
-				forumsArr.push({ ...doc.data(), id: doc.id });
+			documentSnapshot.forEach((doc) => {
+				forumsArr.push({  id: doc.id, ...doc.data() });
 			});
+			console.log(forumsArr)
 			setForums(forumsArr);
-			return () => unsubscribe;
 		});
-
 		setTimeout(() => {
 			setLoading(false);
 		}, 2000);
-	}, []);
 
-	// delete items from database
-	// create delete button. onclick
-	const deleteItem = async (id: string) => {
-		await deleteDoc(doc(db, collection_name, id));
-	};
+		return () => {
+			if (unsubscribe) unsubscribe
+		};
+	}, []);
 
 	return (
 		<div className='w-screen flex flex-col'>
@@ -137,11 +90,9 @@ export default function Forum() {
 						{forums.map((forum: Forum, id) => (
 							<div key={id}>
 								<ForumAccordion
-									title={forum.Title}
-									content={forum.Comment}
-									addComment={addComment}
-									newComment={newComment}
-									handleCommentInputChange={handleCommentInputChange}
+									question={forum.question}
+									comments={forum.comments}
+									id={forum.id}
 								/>
 							</div>
 						))}
@@ -149,7 +100,8 @@ export default function Forum() {
 				)}
 				<div className='m-auto w-3/4 mt-5 flex flex-col justify-center'>
 					<form
-						// onSubmit={addForum}
+						onSubmit={addForum}
+						// onClick={(e) => addForum(e)}
 						className='m-auto flex flex-col justify-center'
 					>
 						<label
@@ -160,14 +112,13 @@ export default function Forum() {
 							<input
 								type='text'
 								value={newForum}
-								onChange={() => handleFormInputChange}
+								onChange={(e) => setNewForum(e.target.value)}
 								className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
 								id='topic'
 								placeholder='Topic'
 							/>
 						</label>
 						<button
-							onClick={() => addForum}
 							type='submit'
 						>
 							Submit

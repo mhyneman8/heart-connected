@@ -1,19 +1,42 @@
 import { useState } from 'react';
+import { db } from '../firebase/clientApp';
+import { updateDoc, doc, arrayUnion } from '@firebase/firestore';
 
 type Props = {
-	title: string;
-	content: string;
-	addComment: any;
-	newComment: string;
-	handleCommentInputChange: any;
+	question: string;
+	comments: Array<string>;
+	id: string;
 };
 
 export default function ForumAccordion(props: Props) {
 	const [isShowing, setIsShowing] = useState(false);
+	const [newComment, setNewComment] = useState('');
+	const comments = props.comments || [];
 
 	const toggle = () => {
 		setIsShowing(!isShowing);
 	};
+
+	const addComment = (e: any) => {
+
+		e.preventDefault();
+		const docRef = doc(db, 'forums', props.id);
+		console.log(props.comments)
+		console.log(newComment)
+		props.comments.push(newComment)
+		updateDoc(docRef, {
+			comments: arrayUnion(newComment),
+		})
+		.then(() => {
+			setNewComment('')
+		})
+	}
+
+	const handleChange = (e: any) => {
+		console.log(e.target.value)
+		setNewComment(e.target.value)
+		console.log('setnewcomment', newComment)
+	}
 
 	return (
 		<div className='my-2'>
@@ -25,7 +48,7 @@ export default function ForumAccordion(props: Props) {
 					borderRadius: isShowing ? '0.75rem 0.75rem 0 0' : '0.75rem',
 				}}
 			>
-				<p>{props.title}</p>
+				<p>{props.question}</p>
 				<svg
 					data-accordion-icon
 					className='w-3 h-3 shrink-0'
@@ -39,9 +62,9 @@ export default function ForumAccordion(props: Props) {
 				>
 					<path
 						stroke='currentColor'
-						stroke-linecap='round'
-						stroke-linejoin='round'
-						stroke-width='2'
+						strokeLinecap='round'
+						strokeLinejoin='round'
+						strokeWidth='2'
 						d='M9 5 5 1 1 5'
 					/>
 				</svg>
@@ -50,16 +73,20 @@ export default function ForumAccordion(props: Props) {
 				style={{ display: isShowing ? 'block' : 'none', padding: '5px' }}
 				className='bg-white rounded-b-xl p-6 text-black shadow-lg'
 			>
+			{ comments.map((comment, index) => (
 				<div
+					key={index}
 					className='px-2'
 					dangerouslySetInnerHTML={{
-						__html: props.content,
+						__html: comment,
 					}}
 				/>
+
+			))}
 				<div className='border-t mt-3'>
 					<form
-						onSubmit={props.addComment}
 						className='pl-3 pb-3'
+						onSubmit={addComment}
 					>
 						<label
 							className='block uppercase tracking-wide text-gray-700 text-xs font-bold p mb-2 mt-3'
@@ -68,15 +95,14 @@ export default function ForumAccordion(props: Props) {
 							Respond:
 							<input
 								type='text'
-								value={props.newComment}
-								onChange={props.handleCommentInputChange}
+								value={newComment}
+								onChange={(e) => handleChange(e)}
 								className='shadow appearance-none border rounded w-full mt-2 mb-3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-								id='comment'
+								id={props.id}
 								placeholder='New Comment'
 							/>
 						</label>
 						<button
-							onClick={() => props.addComment(props.title)}
 							type='submit'
 						>
 							Add Comment
