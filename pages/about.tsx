@@ -8,9 +8,9 @@ export default function About() {
 	const [showModal, setShowModal] = React.useState<boolean>(false);
 
 	return (
-		<div>
+		<div className="max-w-[1000px] m-auto">
 			<Navigation />
-			<Heading imgSrc={'/pics/hand-heart.jpg'} heading='About Heart Connected' />
+			<Heading imgSrc={'/mural.jpg'} heading='About Heart Connected' credit={'Irving Park and Francisco in the Albany Park neighborhood of Chicago. Artist: Christian Paz.'} />
 			<div className='body flex flex-col justify-center mb-10'>
 				{aboutContent.map((section, index) => (
 					<div
