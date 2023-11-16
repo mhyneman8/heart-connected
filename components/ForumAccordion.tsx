@@ -21,9 +21,7 @@ export default function ForumAccordion(props: Props) {
 
 		e.preventDefault();
 		const docRef = doc(db, 'forums', props.id);
-		console.log(props.comments)
-		console.log(newComment)
-		props.comments.push(newComment)
+		comments.push(newComment)
 		updateDoc(docRef, {
 			comments: arrayUnion(newComment),
 		})
