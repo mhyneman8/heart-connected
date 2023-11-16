@@ -29,9 +29,9 @@ export default function Network() {
 	const [showModal, setShowModal] = useState(false);
 
 	return (
-		<div>
+		<div className="max-w-[1000px] m-auto">
 			<Navigation />
-			<Heading imgSrc={'/pics/Strength_connection.jpg'} heading='Join the Heart Connected Community' />
+			<Heading credit={''} imgSrc={'/pics/Strength_connection.jpg'} heading='Join the Heart Connected Community' />
 			<div className='body'>
 				{showModal && (
 					<NetworkModal

@@ -10,9 +10,9 @@ import Tooltip from '../components/Tooltip';
 
 export default function Learn() {
 	return (
-		<div>
+		<div className="max-w-[1000px] m-auto">
 			<Navigation />
-			<Heading imgSrc={'/pics/Reading_Education.jpg'} heading='What is Congenital Heart Disease?' />
+			<Heading credit={''} imgSrc={'/pics/Reading_Education.jpg'} heading='What is Congenital Heart Disease?' />
 
 			<div className='body text-black px-10'>
 				<h3 className='font-bold mb-6 text-center'>

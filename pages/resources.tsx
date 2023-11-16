@@ -9,9 +9,9 @@ import Image from 'next/image';
 
 export default function Resources() {
 	return (
-		<div>
+		<div className="max-w-[1000px] m-auto">
 			<Navigation />
-			<Heading imgSrc={'/pics/Therapy_Resources.jpg'} heading='Resources for Those With Congenital Heart Disease' />
+			<Heading credit={''} imgSrc={'/pics/Therapy_Resources.jpg'} heading='Resources for Those With Congenital Heart Disease' />
 
 			<div className='body flex flex-col justify-center mb-8'>
 				<div className='m-auto text-xl max-w-lg'>
@@ -60,6 +60,10 @@ export default function Resources() {
 						<ResourcesAccordion
 							title='Education Content'
 							content={resources.educ}
+						/>
+						<ResourcesAccordion
+							title='Therapy Resources'
+							content={resources.therapy}
 						/>
 					</div>
 				</div>

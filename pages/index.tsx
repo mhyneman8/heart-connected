@@ -10,7 +10,7 @@ export default function Home() {
 	const [showModal, setShowModal] = React.useState<boolean>(false);
 
 	return (
-		<div id='home'>
+		<div id='home' className="max-w-[1000px] m-auto">
 			<Navigation />
 			<div className='hero h-full min-h-[70vh] flex flex-col justify-center relative'>
 				<Image
@@ -19,8 +19,8 @@ export default function Home() {
 					alt=''
 				/>
 				<div
-					className='title mx-auto lg:text-6xl md:text-5xl text-4xl max-w-lg lg:max-w-full text-center text-white px-3 z-10 bg-sky-400/50 rounded'
-					style={{ boxShadow: '0 0 10px 26px rgb(56 189 248 / .5)' }}
+					className='title mx-auto lg:text-6xl md:text-5xl text-4xl max-w-lg lg:max-w-full text-center text-white p-8 z-10 bg-slate-800/50 rounded-lg'
+					// style={{ boxShadow: '0 0 10px 26px rgb(56 189 248 / .5)' }}
 				>
 					Find Community with Heart Connected
 				</div>

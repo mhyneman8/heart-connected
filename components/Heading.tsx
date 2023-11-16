@@ -3,12 +3,13 @@ import Image from "next/image";
 type Heading = {
     heading: string;
     imgSrc: string;
+    credit: string;
 }
 
-export default function Heading({ heading, imgSrc }: Heading) {
+export default function Heading({ heading, imgSrc, credit }: Heading) {
     return (
         // <div className="hero flex flex-col justify-center mb-20">
-        <div className='hero h-full min-h-[70vh] flex flex-col justify-end relative mb-20'>
+        <div className='hero h-full min-h-[70vh] max-w-[1000px] m-auto mt-20 flex flex-col justify-end relative mb-20'>
             <Image
 					src={imgSrc}
 					fill={true}
@@ -20,6 +21,7 @@ export default function Heading({ heading, imgSrc }: Heading) {
 				>
                     {heading}
 				</div>
+                <div className='absolute bottom-[-35px] right-5 text-xs max-w-xs'>{credit}</div>
             {/* <div className="title text-7xl mx-auto mt-32 mb-16 text-center">{heading}</div> */}
         </div>
     )
