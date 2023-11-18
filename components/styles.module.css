@@ -23,6 +23,12 @@
 	transition: opacity 0.3s;
 }
 
+@media (max-width: 600px) {
+	.tooltip .tooltiptext {
+		left: -27px;
+	}
+}
+
 .tooltip:hover {
 	cursor: pointer;
 }

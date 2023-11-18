@@ -6,6 +6,7 @@ import overview from '../content/learnOverview';
 import Tooltip from '../components/Tooltip';
 import VideoModal from '@/components/VideoModal';
 import { useState } from 'react';
+import info from '../assets/info.svg';
 
 export default function Learn() {
 	const [showVideo, setShowVideo] = useState(false);
@@ -27,12 +28,13 @@ export default function Learn() {
 			<div className='body text-black px-10'>
 				<h3 className='font-bold mb-6 text-center'>
 					Structural{' '}
-					{/* <Tooltip
+					<Tooltip
 						image='/heartpics/Normal.jpg'
 						imgAlt=''
 						text='The anatomical heart consists of four chambers. The upper chambers, or atria, which receive blood from the body and lungs; and the lower chambers, or ventricles, which send blood to the body and the lungs. The heart functions as the pump and connection between these two different systems to obtain oxygen from the lungs and deliver it to all the other organs, like the brain, stomach, kidneys, and more. In normal anatomy, the right atrium receives blood from the body and directs it to the right ventricle which sends blood via the pulmonary arteries to the lungs for oxygenation. The left atrium receives oxygen-rich blood, directing it to the left ventricle which sends the blood via the aorta to the rest of the body.'
-					> */}
-					Heart Development {/* </Tooltip>{' '} */}
+					>
+						Heart Development{' '}
+					</Tooltip>{' '}
 					in a Nutshell:
 				</h3>
 				<div className='flex-col justify-center flex max-w-[70%] mx-auto'>
@@ -56,31 +58,17 @@ export default function Learn() {
 						heart tube with an arterial and venous pole and slow rhythmic contractions. Soon after the four chambers
 						begin to differentiate, and the pulmonary vessels form and attach to the left atrium.
 					</p>
-					{/* <Image
-						src='https://www.mechanobio.info/wp-content/uploads/2017/06/stages-of-cardiac-development.jpg'
-						width={150}
-						height={150}
-						alt='Stages of heart development'
-						className=''
-					/> */}
 				</div>
 				<div className='py-5'>
-					{/* <Image
-						src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Tapv-575px.jpg/300px-Tapv-575px.jpg'
-						width={250}
-						height={150}
-						alt='TAPVR'
-						className=''
-					/> */}
 					<p className='my-auto'>
 						Inappropriate attachment of the pulmonary veins leads to a complex cardiac lesion, called{' '}
-						{/* <Tooltip
+						<Tooltip
 							text='Totally anomalous pulmonary venous return (TAPVR) is a lesion that results from inappropriate placement of the pulmonary veins (vessels returning blood to the left atrium). The severity of this defect depends on the attachment of the veins, as they can fuse to the vena cava (the large vein returning blood to the right atrium), either above or below the heart, or to a different chamber of the heart itself.'
 							image='/heartpics/TAPVR.jpg'
 							imgAlt=''
-						> */}
-						TAPVR (totally anomalous pulmonary venous return),
-						{/* </Tooltip>{' '} */}
+						>
+							TAPVR (totally anomalous pulmonary venous return),
+						</Tooltip>{' '}
 						whose severity depends their exact attachment location.
 					</p>
 				</div>
@@ -92,58 +80,42 @@ export default function Learn() {
 				<p className='mt-10'>
 					During the formation of interatrial and interventricular septations incomplete closure can occur resulting in
 					atrial and/or ventricular septal defects (
-					{/* <Tooltip
+					<Tooltip
 						text='Septal, or wall, defects can form between either the atria (ASD) or the ventricles (VSD). These lesions, if isolated, are generally less severe, but still result in shunting (misdirected blood flow).'
 						image='/heartpics/ASD.jpg'
 						imgAlt=''
 						image2='/heartpics/VSD.jpg'
 						img2Alt=''
-					> */}
-					ASD and VSD
-					{/* </Tooltip> */}, respectively).
+					>
+						ASD and VSD
+					</Tooltip>
+					, respectively).
 				</p>
-				{/* <Image
-					src='https://www.tourmyindia.com/medical-tourism/uploads/procedure/images/37f154c6feba39ae9fab3f31f5923c8f.jpg'
-					width={550}
-					height={150}
-					alt='atrial and ventricular septal defects'
-					className='m-auto py-10'
-				/> */}
 				<p className=''>
 					While these defects are usually considered non-severe (or acyanotic),{' '}
-					{/* <Tooltip
+					<Tooltip
 						image='/heartpics/TOF.jpg'
 						imgAlt=''
 						text='Tetralogy of Fallot is a lesion that, while complex with 4 identifiable features, can simply be thought of as  a ventricular septal defect which formed from a ventricular septum that pushed into the right ventricle. This inappropriate placement leads to the other 3 distinguishing features. It pushes the aorta into the right ventricle causing pulmonary artery stenosis (narrowing) and straining the right ventricle resulting in hypertrophy (enlargement)'
-					> */}
-					Tetrology of Fallot (ToF)
-					{/* </Tooltip>{' '} */}
+					>
+						Tetrology of Fallot (ToF)
+					</Tooltip>{' '}
 					is a complex VSD with additional features stemming from the exact location of the lesion.
 				</p>
-				{/* <Image
-					src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Tetralogy_of_Fallot.svg/1200px-Tetralogy_of_Fallot.svg.png'
-					width={450}
-					height={150}
-					alt='Tetrology of Fallot'
-					className='m-auto py-10'
-				/> */}
 				<p className='mt-8'>
 					After complete chamber differentiation and septum formation, the outflow tracts (i.e., aorta and pulmonary
 					arteries) develop and this is where defects including{' '}
-					{/* <Tooltip
+					<Tooltip
 						image='/heartpics/TGA.jpg'
 						imgAlt=''
 						text='Transposition of the great arteries is a severe lesion that occurs when the aorta (leads to body) and the pulmonary artery (leads to lungs) are attached to the wrong ventricle.This means the body and the lungs circulations are separated from each other and oxygen-rich blood cannot reach other organs. There are other types of TGA, which sees the ventricles transposed while the arteries are in appropriate placement, and while this sounds better it can lead to its own host of issues.'
-					> */}
-					transposition of the great arteries (TGA)
-					{/* </Tooltip> */},{' '}
-					{/* <Tooltip
-						image='/heartpics/DORV.jpg'
-						imgAlt=''
-						text='Double outlet right ventricle (DORV) is a condition where both the pulmonary arteries and aorta are connected to the right ventricle. This can occur with under-development of the left ventricle, inappropriate alignment of the interventricular wall, or a reduced pulmonary artery size.'
-					> */}
-					double outlet right ventricle (DORV)
-					{/* </Tooltip> */}, and pulmonary atresia occur.
+						image2='/heartpics/DORV.jpg'
+						img2Alt=''
+						text2='Double outlet right ventricle (DORV) is a condition where both the pulmonary arteries and aorta are connected to the right ventricle. This can occur with under-development of the left ventricle, inappropriate alignment of the interventricular wall, or a reduced pulmonary artery size.'
+					>
+						transposition of the great arteries (TGA)
+					</Tooltip>
+					, double outlet right ventricle (DORV) , and pulmonary atresia occur.
 				</p>
 
 				<p className='mt-8'>
