@@ -57,27 +57,3 @@ function Tooltip(props: Props) {
 }
 
 export default Tooltip;
-
-// 	return (
-// 		<div className={styles.tooltip}>
-// 			{children}
-// 			{image2 && (
-// 				<Image
-// 					src={image2}
-// 					width={150}
-// 					height={150}
-// 					alt={img2Alt}
-// 					className=''
-// 				/>
-// 			)}
-// 			<span className={styles.tooltiptext}>{text}</span>
-// 			<Image
-// 				src={image}
-// 				width={150}
-// 				height={150}
-// 				alt={imgAlt}
-// 				className=''
-// 			/>
-// 		</div>
-// 	);
-// }

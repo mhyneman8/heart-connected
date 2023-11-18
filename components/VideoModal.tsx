@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 type Props = {
 	setShowVideo: React.Dispatch<React.SetStateAction<boolean>>;
@@ -14,13 +14,13 @@ export default function VideoModal({ setShowVideo, credit, video: videoId, title
 		<div className='text-center'>
 			<div className='opacity-40 bg-black fixed inset-0 z-40'></div>
 			<div className='flex justify-center items-center overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none'>
-				<div className='relative my-6 mx-auto'>
+				<div className='relative my-6 mx-auto w-[80%] h-[80%]'>
 					<div
-						className='border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none'
-						style={{ minWidth: '80vw', minHeight: '60vh' }}
+						className='border-0 rounded-lg shadow-lg relative flex h-[100%] flex-col w-full bg-white outline-none focus:outline-none'
+						// style={{ minWidth: '80vw', minHeight: '60vh' }}
 					>
 						<div className='flex items-start justify-between p-5 border-b border-solid border-gray-300 rounded-t '>
-							<h3 className='text-3xl font=semibold'>{title}</h3>
+							<h3 className='text-2xl font=semibold'>{title}</h3>
 							{/* close button */}
 							<button
 								className='bg-transparent border-0 text-black float-right'
@@ -31,7 +31,7 @@ export default function VideoModal({ setShowVideo, credit, video: videoId, title
 								</span>
 							</button>
 						</div>
-						<div className='relative p-6 flex justify-center w-full pb-[56.25%]'>
+						<div className='relative p-6 flex justify-center w-full h-full'>
 							<iframe
 								// width="560"
 								// height="315"

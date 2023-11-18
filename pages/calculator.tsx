@@ -2,6 +2,7 @@ import Heading from '@/components/Heading';
 import Navigation from '@/components/Navigation';
 import Calc from '@/components/Calc';
 import { useState } from 'react';
+import styles from '../components/styles.module.css';
 
 export default function Calculator() {
 	const [showCalculator, setShowCalculator] = useState(false);
@@ -62,7 +63,7 @@ export default function Calculator() {
 				) : (
 					<div className='w-full flex'>
 						<button
-							className='text-white font-bold px-8 py-3 rounded-full m-auto bg-cyan shadow hover:shadow-lg outline-none focus:outline-none mb-4'
+							className={styles.primaryBtn}
 							onClick={() => handleCalcOpen()}
 						>
 							Start the Risk Calculator
