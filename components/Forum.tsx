@@ -77,9 +77,7 @@ export default function Forum() {
 				) : forums.length === 0 ? (
 					<div className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4'>
 						<h2>No forum questions</h2>
-						<p>
-							Consider asking a question <a href='/add-forum'>here</a>
-						</p>
+						<p>Be the first to start a conversation!</p>
 					</div>
 				) : (
 					<div className='mx-auto w-full bg-indigo rounded-b-2xl p-6'>
