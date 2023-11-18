@@ -15,7 +15,7 @@ export default function Home() {
 			className='max-w-[1000px] m-auto'
 		>
 			<Navigation />
-			<div className='hero h-full min-h-[70vh] flex flex-col justify-center relative'>
+			<div className='hero h-full min-h-[70vh] max-w-[1000px] ml-[-20px] flex flex-col w-screen justify-center relative'>
 				<Image
 					src='/pics/paint-heart.jpg'
 					fill={true}
@@ -23,7 +23,7 @@ export default function Home() {
 				/>
 				<div
 					className='title mx-auto lg:text-6xl md:text-5xl text-4xl max-w-lg lg:max-w-full text-center text-white p-8 z-10 bg-slate-800/50 rounded-lg'
-					// style={{ boxShadow: '0 0 10px 26px rgb(56 189 248 / .5)' }}
+					style={{ boxShadow: '0 0 10px 26px rgb(30 41 59 / .5)' }}
 				>
 					Find Community with Heart Connected
 				</div>
@@ -36,7 +36,7 @@ export default function Home() {
 
 			<div className='missionSection flex justify-center flex-col'>
 				<div className='mission'>
-					<div className='heading h2 w-100 m-auto text-6xl mt-10 mb-8 text-center'>Our Mission</div>
+					<div className='heading h2 w-100 m-auto md:text-6xl text-4xl mt-10 mb-8 text-center'>Our Mission</div>
 					<div className='body w-3/4 m-auto mb-8 text-lg'>
 						The goal of Heart Connected is to provide community, education and support for those with Congenital Heart
 						Diseases and their loved ones. Founded by medical professionals who are passionate about cardiac care,
@@ -46,13 +46,13 @@ export default function Home() {
 			</div>
 
 			<div className='body flex justify-center flex-col'>
-				<div className='h2 w-100 m-auto text-6xl mt-20 mb-8 text-center'>A community with heart</div>
+				<div className='h2 w-100 m-auto md:text-6xl text-4xl mt-20 mb-8 text-center'>A community with heart</div>
 				<VideoSection />
 
 				<div className='cta w-full text-center my-12'>
 					{showModal && <NetworkModal setShowModal={setShowModal} />}
-					<div className='h2 w-3/4 m-auto text-5xl mt-12 mb-8'>Connect with a family like yours</div>
-					<div className='h6 w-3/4 m-auto mb-8 text-lg'>
+					<div className='h2 w-3/4 m-auto md:text-5xl text-4xl mt-12 mb-8'>Connect with a family like yours</div>
+					<div className='h6 w-3/4 m-auto mb-8 text-lg text-left'>
 						Join our community of families facing similar experiences. Share support, insights, and find a community of
 						people who understand what you&apos;re going through. By providing your email and city, you&apos;ll gain
 						access to a list of like-minded individuals who are here to lend an empathetic ear and offer valuable
