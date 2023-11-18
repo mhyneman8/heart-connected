@@ -28,8 +28,8 @@ const resources: ResourceType = {
 		{
 			key: 'ohhf',
 			imgSrc: '/OHHF_logo.png',
-			width: 30,
-			height: 30,
+			width: 20,
+			height: 20,
 			link: 'https://theohhf.org/',
 			text: 'Ollie Hinkle Heart Foundation',
 			description:
@@ -38,17 +38,18 @@ const resources: ResourceType = {
 		{
 			key: 'lch',
 			imgSrc: '/lch-logo.png',
-			width: 40,
-			height: 40,
+			width: 20,
+			height: 20,
 			link: 'https://www.luriechildrens.org/en/specialties-conditions/complex-congenital-heart-disease-care-center/',
 			text: "Lurie Children's Hospital",
-			description: 'Lurie is a nationally recognized heart center with a renowned interventional radiology program. Like CHOP the also treat both the congenital and acquired heart conditions. This link will take you to there Complex Congenital Heart Disease page where they provide information regarding the conditions they treat most frequently.',
+			description:
+				'Lurie is a nationally recognized heart center with a renowned interventional radiology program. Like CHOP the also treat both the congenital and acquired heart conditions. This link will take you to there Complex Congenital Heart Disease page where they provide information regarding the conditions they treat most frequently.',
 		},
 		{
 			key: 'hdf',
 			imgSrc: '/',
-			width: 40,
-			height: 40,
+			width: 20,
+			height: 20,
 			link: 'https://www.heartfeltdreamsfoundation.org/',
 			text: 'Heartfelt Dreams Foundation (New England area) ',
 			description:
@@ -57,8 +58,8 @@ const resources: ResourceType = {
 		{
 			key: 'chf',
 			imgSrc: '/',
-			width: 40,
-			height: 40,
+			width: 20,
+			height: 20,
 			link: 'https://www.childrensheartfoundation.org/',
 			text: "Children's Heart Foundation ",
 			description:
@@ -69,8 +70,8 @@ const resources: ResourceType = {
 		{
 			key: 'aha',
 			imgSrc: '/aha-logo.png',
-			width: 40,
-			height: 40,
+			width: 20,
+			height: 20,
 			link: 'https://www.heart.org/en/health-topics/congenital-heart-defects/about-congenital-heart-defects',
 			text: 'American Heart Association',
 			description:
@@ -79,17 +80,18 @@ const resources: ResourceType = {
 		{
 			key: 'cdc',
 			imgSrc: '/cdc-logo.png',
-			width: 40,
-			height: 40,
+			width: 30,
+			height: 30,
 			link: 'https://www.cdc.gov/ncbddd/heartdefects/index.html',
 			text: 'Center for Disease Control and Prevention',
-			description: 'The CDC is a national organization that provides data driven information and constantly monitoring the quantifiable metrics regarding CHD in the US. They provide good basic overview information regarding CHD and offer prevalence rates for specific defects, however certain aspects can be more dense and may be harder to digest for some. This site is recommended for those who have a better understanding of CHD and are interested in the statistics surrounding them. While certain defects are less common than others though, remember that you are not alone.',
+			description:
+				'The CDC is a national organization that provides data driven information and constantly monitoring the quantifiable metrics regarding CHD in the US. They provide good basic overview information regarding CHD and offer prevalence rates for specific defects, however certain aspects can be more dense and may be harder to digest for some. This site is recommended for those who have a better understanding of CHD and are interested in the statistics surrounding them. While certain defects are less common than others though, remember that you are not alone.',
 		},
 		{
 			key: 'chp',
 			imgSrc: '/',
-			width: 30,
-			height: 30,
+			width: 20,
+			height: 20,
 			link: 'https://www.chop.edu/centers-programs/cardiac-center',
 			text: "Children's Hospital of Philadelphia",
 			description:
@@ -98,50 +100,54 @@ const resources: ResourceType = {
 		{
 			key: 'tc',
 			imgSrc: '/',
-			width: 30,
-			height: 30,
+			width: 20,
+			height: 20,
 			link: 'https://www.texaschildrens.org/departments/cardiology/ruby-beau',
 			text: "Texas Children's CHD Video Library",
 			description:
-				'Ranked #1 in the nation for pediatric cardiac surgery, Texas Children\'s have created an extensive video library showing visual animations regarding numerous heart lesions. Ruby and Beau are a fantastic duo making the comprehension level suitable for children as well, if you have a sibling you would like to better understand that condition, too. ',
+				"Ranked #1 in the nation for pediatric cardiac surgery, Texas Children's have created an extensive video library showing visual animations regarding numerous heart lesions. Ruby and Beau are a fantastic duo making the comprehension level suitable for children as well, if you have a sibling you would like to better understand that condition, too. ",
 		},
 	],
 	therapy: [
 		{
 			key: 'dc',
 			imgSrc: '/',
-			width: 30,
-			height: 30,
+			width: 20,
+			height: 20,
 			link: 'https://depthcounseling.org/',
 			text: 'Depth Counseling',
-			description: 'Depth Counseling is an organization that provides licensed therapy services in Austin, TX and Chicago, IL and specializes and anxiety and depression with the ability to focus on trauma related counseling. They provide therapy to both the insured and provide sliding-scale therapy as well.',
+			description:
+				'Depth Counseling is an organization that provides licensed therapy services in Austin, TX and Chicago, IL and specializes and anxiety and depression with the ability to focus on trauma related counseling. They provide therapy to both the insured and provide sliding-scale therapy as well.',
 		},
 		{
 			key: 'op',
 			imgSrc: '/',
-			width: 30,
-			height: 30,
+			width: 20,
+			height: 20,
 			link: 'https://openpathcollective.org/',
 			text: 'Open Path',
-			description: 'Open Path is a national nonprofit collective of licensed therapist who aim to provide affordable therapy to those underinsured or without insurance. They charge between $40-70 per session after a one-time lifetime membership fee.',
+			description:
+				'Open Path is a national nonprofit collective of licensed therapist who aim to provide affordable therapy to those underinsured or without insurance. They charge between $40-70 per session after a one-time lifetime membership fee.',
 		},
 		{
 			key: 'lo',
 			imgSrc: '/',
-			width: 30,
-			height: 30,
+			width: 20,
+			height: 20,
 			link: 'https://liveoakchicago.com/',
 			text: 'Live Oak',
-			description: 'Live Oak is a Chicago-based organization that aims to provide sustainable, quality counseling services on a sliding-scale with a minimum of $35 per session, whether that be with a licensed counselor or a graduate intern. The strive to practice trauma-informed care and also service individuals with insurance.',
+			description:
+				'Live Oak is a Chicago-based organization that aims to provide sustainable, quality counseling services on a sliding-scale with a minimum of $35 per session, whether that be with a licensed counselor or a graduate intern. The strive to practice trauma-informed care and also service individuals with insurance.',
 		},
 		{
 			key: 'hbh',
 			imgSrc: '/',
-			width: 30,
-			height: 30,
+			width: 20,
+			height: 20,
 			link: '',
 			text: 'Howard Brown Health',
-			description: 'Howard Brown Health is a Chicago-based health service partner who provides sliding-scale services with an approach to incorporate primary care services in the loop to help with overall health. They offer psychiatric care and behavioral counseling with a focus on trauma informed care.',
+			description:
+				'Howard Brown Health is a Chicago-based health service partner who provides sliding-scale services with an approach to incorporate primary care services in the loop to help with overall health. They offer psychiatric care and behavioral counseling with a focus on trauma informed care.',
 		},
 	],
 };

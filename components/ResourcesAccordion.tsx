@@ -72,12 +72,14 @@ export default function ResourceAccordion(props: Props) {
 										className='mr-2'
 									/>
 								)}
-								<ExternalLink
-									link={resource.link}
-									name={resource.text}
-								/>
+								<div className='indent-0'>
+									<ExternalLink
+										link={resource.link}
+										name={resource.text}
+									/>
+								</div>
 							</div>
-							<div className='ml-11 text-sm mb-5'>{resource.description}</div>
+							<div className='ml-1 text-sm mb-5'>{resource.description}</div>
 						</li>
 					))}
 				</ul>
