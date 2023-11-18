@@ -1,10 +1,12 @@
 import { ReactEventHandler, useState } from 'react';
 import RiskAnswer from '@/components/RiskAnswers';
 import calcQuestions from '@/content/calculatorQuestions';
+import styles from './styles.module.css';
 
 type Props = {
 	setShowCalculator: React.Dispatch<React.SetStateAction<boolean>>;
 };
+
 export default function Calc({ setShowCalculator }: Props) {
 	const [selectedAnswerIndex, setSelectedAnswerIndex] = useState<null | number>(null);
 	const [score, setScore] = useState<number>(0);
@@ -15,7 +17,7 @@ export default function Calc({ setShowCalculator }: Props) {
 	const questions = calcQuestions;
 	const { question, choices, questionNumber } = questions[activeQuestion];
 
-	const selectedAnswerStyles = 'bg-indigo border-purple w-fit px-5 mb-4 py-1 rounded hover:cursor-pointer';
+	const selectedAnswerStyles = 'bg-indigo border-purple w-fit px-5 mb-4 py-1 rounded-full hover:cursor-pointer';
 
 	const handleSelected = (value: number, index: number) => {
 		setSelectedAnswer(value);
@@ -43,6 +45,7 @@ export default function Calc({ setShowCalculator }: Props) {
 	};
 
 	const handleClose = () => {
+		console.log('clicked');
 		document.querySelector('body')!.style.overflow = 'auto';
 		setShowCalculator(false);
 	};
@@ -53,7 +56,7 @@ export default function Calc({ setShowCalculator }: Props) {
 			<div className='overflow-y-auto fixed max-w-[520px] inset-0 z-50 outline-none focus:outline-none border-0 my-10 mx-auto w-max-[500px] p-8 rounded-lg shadow-lg flex flex-col bg-white outline-none focus:outline-none'>
 				<button
 					className='absolute right-20'
-					onClick={() => handleClose}
+					onClick={() => handleClose()}
 				>
 					X
 				</button>
@@ -64,7 +67,7 @@ export default function Calc({ setShowCalculator }: Props) {
 						{/* Total (for testing purposes): {score} */}
 						<div className='w-full flex justify-center items-center mt-10'>
 							<button
-								className='text-white font-bold px-8 py-3 rounded-full m-auto bg-cyan shadow hover:shadow-lg outline-none focus:outline-none mb-4'
+								className={styles.primaryBtn}
 								onClick={() => startOver()}
 							>
 								Start Over
@@ -73,13 +76,13 @@ export default function Calc({ setShowCalculator }: Props) {
 					</div>
 				) : (
 					<div className=''>
-						{/* <button onClick={() => previousQuestion()}>
+						{/* <button className={styles.primaryBtn} onClick={() => previousQuestion()}>
                             Previous question
                         </button> */}
 
 						<div className='indent-0 font-bold text-xs mb-3'>Question {questionNumber} / 9</div>
 						<h2 className='indent-0 mb-4'>{question}</h2>
-						<ul className='list-disc indent-0 ml-6'>
+						<ul className='indent-0 ml-6'>
 							{choices.map((item, index) => (
 								<li
 									onClick={() => handleSelected(item[1], index)}
@@ -96,7 +99,7 @@ export default function Calc({ setShowCalculator }: Props) {
 							<button
 								onClick={() => onClickNext()}
 								disabled={selectedAnswerIndex === null}
-								className='bg-cyan py-1 px-7 text-white hover:opacity-8 rounded'
+								className={styles.primaryBtn}
 							>
 								{activeQuestion === questions.length - 1 ? 'Finish' : 'Next'}
 							</button>
