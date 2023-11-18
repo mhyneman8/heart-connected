@@ -1,10 +1,5 @@
 import { db } from '../firebase/clientApp';
-import {
-	collection,
-	query,
-	addDoc,
-	onSnapshot,
-} from '@firebase/firestore';
+import { collection, query, addDoc, onSnapshot } from '@firebase/firestore';
 import { useState, useEffect, ReactEventHandler } from 'react';
 import ForumAccordion from './ForumAccordion';
 
@@ -21,7 +16,6 @@ export default function Forum() {
 	const [forums, setForums] = useState([]);
 	const [newForum, setNewForum] = useState('');
 
-
 	// add item to database
 	const addForum = async (e: any) => {
 		e.preventDefault();
@@ -32,7 +26,6 @@ export default function Forum() {
 				comments: [],
 			});
 		}
-
 	};
 
 	// 	const forumDocuments = await getDocs(collection(db, 'forums'));
@@ -42,7 +35,7 @@ export default function Forum() {
 	// 	})
 	// 	setForums(newForum)
 	// 	console.log(forums)
-	// } 
+	// }
 
 	// read items from database
 	useEffect(() => {
@@ -50,9 +43,9 @@ export default function Forum() {
 		const unsubscribe = onSnapshot(q, (documentSnapshot) => {
 			let forumsArr: any = [];
 			documentSnapshot.forEach((doc) => {
-				forumsArr.push({  id: doc.id, ...doc.data() });
+				forumsArr.push({ id: doc.id, ...doc.data() });
 			});
-			console.log(forumsArr)
+			console.log(forumsArr);
 			setForums(forumsArr);
 		});
 		setTimeout(() => {
@@ -60,12 +53,15 @@ export default function Forum() {
 		}, 2000);
 
 		return () => {
-			if (unsubscribe) unsubscribe
+			if (unsubscribe) unsubscribe;
 		};
 	}, []);
 
 	return (
-		<div className='w-screen flex flex-col'>
+		<div
+			className='w-screen flex flex-col'
+			id='forum'
+		>
 			<div
 				className='flex flex-col mx-auto justify-center mb-6'
 				id='accordion-collapse'
@@ -118,11 +114,7 @@ export default function Forum() {
 								placeholder='Topic'
 							/>
 						</label>
-						<button
-							type='submit'
-						>
-							Submit
-						</button>
+						<button type='submit'>Submit</button>
 					</form>
 				</div>
 			</div>

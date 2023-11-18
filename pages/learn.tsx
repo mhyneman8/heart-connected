@@ -17,7 +17,7 @@ export default function Learn() {
 		'h-72 w-full z-20 max-w-sm flex-col bg-teal flex text-4xl text-white rounded-lg justify-center items-center px-4 text-center m-auto hover:opacity-0 transition ease-in-out duration-500 bg-teal absolute top-0';
 
 	return (
-		<div className='max-w-[1000px] m-auto'>
+		<div className='max-w-[1000px] w-screen m-auto'>
 			<Navigation />
 			<Heading
 				credit={''}
@@ -37,7 +37,7 @@ export default function Learn() {
 					</Tooltip>{' '}
 					in a Nutshell:
 				</h3>
-				<div className='flex-col justify-center flex max-w-[70%] mx-auto'>
+				<div className='flex-col justify-center flex md:max-w-[70%] sm:max-w-[90%] mx-auto'>
 					This page will give you a concise overview of the early stages of cardiac development and the formation of
 					structural heart defects. In this section, we will explore the following topics:
 					<ul className='list-disc mt-3'>
@@ -122,12 +122,13 @@ export default function Learn() {
 					Inappropriate outflow development can also lead to misplacement of the coronary artery (vessels supplying the
 					heart muscle). In the final stages of structural development, atrioventricular (AV) and semi-lunar valves
 					form. Valve formation defects include{' '}
-					{/* <Tooltip
+					<Tooltip
 						text='Ebstein’s anomaly is a malformation of the tricuspid valve (connection between the right atrium and ventricle). Its large and inappropriate formation and alignment leads to backwards flow causing inefficient circulation into and through the pulmonary vessels.'
 						image='/heartpics/Ebstein.jpg'
 						imgAlt=''
-					> */}
-					Ebstein&apos;s anomaly {/* </Tooltip>{' '} */}
+					>
+						Ebstein&apos;s anomaly{' '}
+					</Tooltip>{' '}
 					or a bicuspid (two leaf, rather than the expected three leaf) aortic valve, which can present with early
 					tricuspid incompetency, aortic calcification, and/or heart failure. (Buijtendijk et al., 2020)
 				</p>
@@ -162,7 +163,7 @@ export default function Learn() {
 					credit={'Development of the ventricles and large arterial vessels'}
 				/>
 			)}
-			<div className='video-wrapper flex flex-col justify-center lg:flex-row mb-20 mt-20'>
+			<div className='video-wrapper flex flex-col justify-center  lg:flex-row mb-20 mt-20'>
 				<div className={videoBoxStyles}>
 					<button onClick={() => setShowVideo(true)}>
 						<div className={textBoxStyles}>Congenital Heart Defects Explained: Tetralogy of Fallot</div>
