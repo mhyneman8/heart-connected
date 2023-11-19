@@ -5,6 +5,7 @@ import Link from 'next/link';
 import NetworkModal from '@/components/NetworkModal';
 import VideoSection from '@/components/VideoSection';
 import React, { useState } from 'react';
+import styles from '../components/styles.module.css';
 
 export default function Home() {
 	const [showModal, setShowModal] = React.useState<boolean>(false);
@@ -15,7 +16,7 @@ export default function Home() {
 			className='max-w-[1000px] m-auto'
 		>
 			<Navigation />
-			<div className='hero h-full min-h-[70vh] max-w-[1000px] ml-[-20px] flex flex-col w-screen justify-center relative'>
+			<div className='hero h-full min-h-[70vh] max-w-[1000px] flex flex-col w-screen justify-center relative overflow-hidden'>
 				<Image
 					src='/pics/paint-heart.jpg'
 					fill={true}
@@ -59,7 +60,7 @@ export default function Home() {
 						guidance on your journey.
 					</div>
 					<button
-						className='text-white font-bold px-8 py-3 rounded-full m-auto w-fit bg-cyan shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-4'
+						className={styles.primaryBtn}
 						type='button'
 						onClick={() => setShowModal(true)}
 					>
