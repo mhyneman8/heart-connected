@@ -5,7 +5,8 @@ import { useState } from 'react';
 
 export default function Navigation() {
 	const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);
-	const desktopItemsStyle = 'block inline-block mt-0 mr-4 no-underline hover:underline text-white';
+	const desktopItemsStyle =
+		'block inline-block mt-0 mr-4 no-underline hover:underline text-white';
 	const mobileItemStyle = 'block mt-4 no-underline text-white hover:underline';
 	const handleNavOpen = () => {
 		setMobileNavOpen(!mobileNavOpen);
@@ -72,7 +73,7 @@ export default function Navigation() {
 				<div>
 					<Link
 						href='/network'
-						className='inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:bg-purple  mt-4 lg:mt-0'
+						className='inline-block text-sm no-underline px-4 pr-7 pl-0 py-2 leading-none border rounded text-white border-white hover:bg-purple  mt-4 lg:mt-0'
 					>
 						Join Our Community
 					</Link>
