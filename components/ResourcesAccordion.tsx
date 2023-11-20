@@ -72,7 +72,7 @@ export default function ResourceAccordion(props: Props) {
 										className='mr-2'
 									/>
 								)}
-								<div className='indent-0'>
+								<div>
 									<ExternalLink
 										link={resource.link}
 										name={resource.text}

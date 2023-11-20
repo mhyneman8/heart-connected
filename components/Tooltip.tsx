@@ -11,10 +11,13 @@ type Props = {
 	img2Alt?: string;
 	text2?: string;
 	children: any;
+	left?: boolean;
 };
 
 function Tooltip(props: Props) {
-	const { text, image, image2, imgAlt, img2Alt, children, text2 } = props;
+	const { text, image, image2, imgAlt, img2Alt, children, text2, left } = props;
+	const direction = left ? 'ml-[-100px] left-2/4' : 'mr-[-60px] right-2/4';
+
 	return (
 		<div className={styles.tooltip}>
 			<span className='underline text-purple hover:text-indigo'>
@@ -27,7 +30,7 @@ function Tooltip(props: Props) {
 					className='inline mt-[-10px]'
 				/>
 			</span>
-			<span className={styles.tooltiptext}>
+			<span className={`${styles.tooltiptext} ${direction}`}>
 				{' '}
 				<div className='text-center mb-5'>
 					<Image

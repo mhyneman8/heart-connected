@@ -30,34 +30,45 @@ export default function Home() {
 				</div>
 				<div className='flex justify-center w-full'>
 					<div className='subtitle mx-auto mt-4 lg:text-4xl md:text-2xl max-w-xl lg:max-w-full text-xl text-white z-10 absolute bottom-3 md:bottom-10 text-center w-full'>
-						Helping to bring hope and connection to those affected by congenital heart disease.
+						Helping to bring hope and connection to those affected by congenital
+						heart disease.
 					</div>
 				</div>
 			</div>
 
 			<div className='missionSection flex justify-center flex-col'>
 				<div className='mission'>
-					<div className='heading h2 w-100 m-auto md:text-6xl text-4xl mt-10 mb-8 text-center'>Our Mission</div>
-					<div className='body w-3/4 m-auto mb-8 text-lg'>
-						The goal of Heart Connected is to provide community, education and support for those with Congenital Heart
-						Diseases and their loved ones. Founded by medical professionals who are passionate about cardiac care,
-						Connected Hearts seeks to help make living with a congenital heart disease diagnosis just a little easier.
+					<div className='heading h2 w-100 m-auto md:text-6xl text-4xl mt-10 mb-8 text-center'>
+						Our Mission
+					</div>
+					<div className='body w-3/4 m-auto mb-8 text-lg para'>
+						The goal of Heart Connected is to provide community, education and
+						support for those with Congenital Heart Diseases and their loved
+						ones. Founded by medical professionals who are passionate about
+						cardiac care, Heart Connected seeks to help make living with a
+						congenital heart disease diagnosis just a little easier.
 					</div>
 				</div>
 			</div>
 
 			<div className='body flex justify-center flex-col'>
-				<div className='h2 w-100 m-auto md:text-6xl text-4xl mt-20 mb-8 text-center'>A community with heart</div>
+				<div className='h2 w-100 m-auto md:text-6xl text-4xl mt-20 mb-8 text-center'>
+					A community with heart
+				</div>
 				<VideoSection />
 
 				<div className='cta w-full text-center my-12'>
 					{showModal && <NetworkModal setShowModal={setShowModal} />}
-					<div className='h2 w-3/4 m-auto md:text-5xl text-4xl mt-12 mb-8'>Connect with a family like yours</div>
-					<div className='h6 w-3/4 m-auto mb-8 text-lg text-left'>
-						Join our community of families facing similar experiences. Share support, insights, and find a community of
-						people who understand what you&apos;re going through. By providing your email and city, you&apos;ll gain
-						access to a list of like-minded individuals who are here to lend an empathetic ear and offer valuable
-						guidance on your journey.
+					<div className='h2 w-3/4 m-auto md:text-5xl text-4xl mt-12 mb-8'>
+						Connect With A Family Like Yours
+					</div>
+					<div className='h6 w-3/4 m-auto mb-8 text-lg text-left para'>
+						Join our community of families facing similar experiences. Share
+						support, insights, and join a network of people who understand what
+						you&apos;re going through. By providing your email and city,
+						you&apos;ll gain access to a list of like-minded individuals who are
+						here to lend an empathetic ear and offer valuable guidance on your
+						journey.
 					</div>
 					<button
 						className={styles.primaryBtn}
