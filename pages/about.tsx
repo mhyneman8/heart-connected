@@ -8,9 +8,15 @@ export default function About() {
 	const [showModal, setShowModal] = React.useState<boolean>(false);
 
 	return (
-		<div className="max-w-[1000px] m-auto">
+		<div className='max-w-[1000px] m-auto'>
 			<Navigation />
-			<Heading imgSrc={'/mural.jpg'} heading='About Heart Connected' credit={'Irving Park and Francisco in the Albany Park neighborhood of Chicago. Artist: Christian Paz.'} />
+			<Heading
+				imgSrc={'/mural.jpg'}
+				heading='About Heart Connected'
+				credit={
+					'Irving Park and Francisco in the Albany Park neighborhood of Chicago. Artist: Christian Paz.'
+				}
+			/>
 			<div className='body flex flex-col justify-center mb-10'>
 				{aboutContent.map((section, index) => (
 					<div
@@ -23,11 +29,7 @@ export default function About() {
 				))}
 
 				<div className='flex flex-col justify-center'>
-					{showModal && (
-						<NetworkModal
-							setShowModal={setShowModal}
-						/>
-					)}
+					{showModal && <NetworkModal setShowModal={setShowModal} />}
 					<div className='h2 w-3/4 m-auto text-5xl mt-12 mb-8'>
 						Connect with a family like yours
 					</div>
