@@ -8,7 +8,9 @@ type Props = {
 };
 
 export default function Calc({ setShowCalculator }: Props) {
-	const [selectedAnswerIndex, setSelectedAnswerIndex] = useState<null | number>(null);
+	const [selectedAnswerIndex, setSelectedAnswerIndex] = useState<null | number>(
+		null
+	);
 	const [score, setScore] = useState<number>(0);
 	const [showResult, setShowResult] = useState(false);
 	const [activeQuestion, setActiveQuestion] = useState(0);
@@ -17,7 +19,8 @@ export default function Calc({ setShowCalculator }: Props) {
 	const questions = calcQuestions;
 	const { question, choices, questionNumber } = questions[activeQuestion];
 
-	const selectedAnswerStyles = 'bg-indigo border-purple w-fit px-5 mb-4 py-1 rounded-full hover:cursor-pointer';
+	const selectedAnswerStyles =
+		'bg-indigo border-purple w-fit px-5 mb-4 py-1 rounded-full hover:cursor-pointer';
 
 	const handleSelected = (value: number, index: number) => {
 		setSelectedAnswer(value);
@@ -60,9 +63,9 @@ export default function Calc({ setShowCalculator }: Props) {
 				>
 					X
 				</button>
-				<h1 className='indent-0 font-bold text-lg mb-3'>Risk Level Estimator</h1>
+				<h1 className='font-bold text-lg mb-3'>Risk Level Estimator</h1>
 				{showResult ? (
-					<div className='mt-8 indent-0'>
+					<div className='mt-8'>
 						<RiskAnswer score={score} />
 						{/* Total (for testing purposes): {score} */}
 						<div className='w-full flex justify-center items-center mt-10'>
@@ -80,15 +83,19 @@ export default function Calc({ setShowCalculator }: Props) {
                             Previous question
                         </button> */}
 
-						<div className='indent-0 font-bold text-xs mb-3'>Question {questionNumber} / 9</div>
-						<h2 className='indent-0 mb-4'>{question}</h2>
-						<ul className='indent-0 ml-6'>
+						<div className='font-bold text-xs mb-3'>
+							Question {questionNumber} / 9
+						</div>
+						<h2 className='mb-4'>{question}</h2>
+						<ul className='ml-6'>
 							{choices.map((item, index) => (
 								<li
 									onClick={() => handleSelected(item[1], index)}
 									key={index}
 									className={
-										selectedAnswerIndex === index ? selectedAnswerStyles : 'px-5  py-1 mb-4 hover:cursor-pointer'
+										selectedAnswerIndex === index
+											? selectedAnswerStyles
+											: 'px-5  py-1 mb-4 hover:cursor-pointer'
 									}
 								>
 									{item[0]}
@@ -107,8 +114,9 @@ export default function Calc({ setShowCalculator }: Props) {
 					</div>
 				)}
 				<div className='flex justify-center '>
-					<div className='caption absolute bottom-10 sm:bottom-4 max-w-sm text-center m-auto indent-0'>
-						To better help us formulate an accurate risk factor please consider also filling out {''}
+					<div className='caption absolute bottom-10 sm:bottom-4 max-w-sm text-center m-auto'>
+						To better help us formulate an accurate risk factor please consider
+						also filling out {''}
 						<a href=''>our survey</a>.
 					</div>
 				</div>
