@@ -113,11 +113,11 @@ export default function NetworkModal({ setShowModal }: Props) {
 		return error;
 	};
 
-	const labelStyle =
-		'inline text-black text-sm font-bold mb-1 indent-0 ml-1 text-left';
+	// const labelStyle =
+	// 	'inline text-black text-sm font-bold mb-1 ml-1 text-left';
 	const inputStyle =
 		'shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-black';
-	const errorStyle = 'text-red-500 text-xs pl-2';
+	const errorStyle = 'text-red-500 text-xs';
 
 	return (
 		<div className='text-center'>
@@ -157,40 +157,44 @@ export default function NetworkModal({ setShowModal }: Props) {
 											className='text-left rounded pt-3 pb-8 w-full'
 											onSubmit={handleSubmit}
 										>
-											<label className={labelStyle}>Full Name</label>
+											{/* <label className={labelStyle}>Full Name</label> */}
 											<span className={errorStyle}>{errorMessages.first}</span>
 											<input
 												className={inputStyle}
 												onChange={handleChange}
-												onBlur={handleBlur}
+												// onBlur={() => handleBlur}
 												value={formData.first}
+												placeholder='Full Name'
 												name='first'
 											/>
-											<label className={labelStyle}>Email</label>
+											{/* <label className={labelStyle}>Email</label> */}
 											<span className={errorStyle}>{errorMessages.email}</span>
 											<input
 												onChange={handleChange}
-												onBlur={handleBlur}
+												// onBlur={() => handleBlur}
 												className={inputStyle}
 												name='email'
+												placeholder='Email'
 											/>
-											<label className={labelStyle}>Diagnosis</label>
+											{/* <label className={labelStyle}>Diagnosis</label> */}
 											<span className={errorStyle}>
 												{errorMessages.diagnosis}
 											</span>
 											<input
 												onChange={handleChange}
-												onBlur={handleBlur}
+												// onBlur={handleBlur}
 												className={inputStyle}
 												value={formData.diagnosis}
 												name='diagnosis'
+												placeholder='Diagnosis'
 											/>
-											<label className={labelStyle}>City</label>
+											{/* <label className={labelStyle}>City</label> */}
 											<input
 												onChange={handleChange}
-												onBlur={handleBlur}
+												// onBlur={handleBlur}
 												className={inputStyle}
 												name='city'
+												placeholder='City'
 											/>
 										</form>
 									</div>
