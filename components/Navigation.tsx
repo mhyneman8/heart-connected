@@ -46,10 +46,10 @@ export default function Navigation() {
 			>
 				<div className='text-md lg:flex-grow ml-8'>
 					<Link
-						href='/resources'
+						href='/about'
 						className={desktopItemsStyle}
 					>
-						Resources
+						About
 					</Link>
 					<Link
 						href='/learn'
@@ -58,10 +58,10 @@ export default function Navigation() {
 						Learn
 					</Link>
 					<Link
-						href='/about'
+						href='/resources'
 						className={desktopItemsStyle}
 					>
-						About
+						Resources
 					</Link>
 					<Link
 						href='/calculator'
@@ -73,7 +73,7 @@ export default function Navigation() {
 				<div>
 					<Link
 						href='/network'
-						className='inline-block text-sm no-underline px-4 pr-7 pl-0 py-2 leading-none border rounded text-white border-white hover:bg-purple  mt-4 lg:mt-0'
+						className='inline-block text-sm no-underline px-4 py-2 leading-none border rounded text-white border-white hover:bg-purple  mt-4 lg:mt-0'
 					>
 						Join Our Community
 					</Link>
@@ -87,10 +87,10 @@ export default function Navigation() {
 				>
 					<div className='text-md'>
 						<Link
-							href='/resources'
+							href='/about'
 							className={mobileItemStyle}
 						>
-							Resources
+							About
 						</Link>
 						<Link
 							href='/learn'
@@ -99,10 +99,10 @@ export default function Navigation() {
 							Learn
 						</Link>
 						<Link
-							href='/about'
+							href='/resources'
 							className={mobileItemStyle}
 						>
-							About
+							Resources
 						</Link>
 						<Link
 							href='/calculator'
@@ -114,7 +114,7 @@ export default function Navigation() {
 					<div>
 						<Link
 							href='/network'
-							className='inline-block no-underline text-sm pl-0 pr-7 py-2 leading-none border rounded text-white border-white hover:bg-purple mt-8'
+							className='inline-block no-underline text-sm px-4 py-2 leading-none border rounded text-white border-white hover:bg-purple mt-8'
 						>
 							Join Our Community
 						</Link>
