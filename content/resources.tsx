@@ -33,7 +33,7 @@ const resources: ResourceType = {
 			link: 'https://theohhf.org/',
 			text: 'Ollie Hinkle Heart Foundation',
 			description:
-				'A foundation created by a parents affected by CHD for families affected by CHD. Their mission is to address unmet needs, including financial assistance, mental health resources and community support across the US. Whether you are looking for help with your current experience or are interested in giving back through financial support or community engagement the is a fantastic organization to look into to.',
+				'Having concerns about finances are completely normal. Whether you are looking for help with medical bills, travel, or any number of other expenses associated with caring for your child or are looking to give back to help another family or fund CHD research, consider exploring the following organizations.',
 		},
 		{
 			key: 'lch',
@@ -105,7 +105,7 @@ const resources: ResourceType = {
 			link: 'https://www.texaschildrens.org/departments/cardiology/ruby-beau',
 			text: "Texas Children's CHD Video Library",
 			description:
-				"Ranked #1 in the nation for pediatric cardiac surgery, Texas Children's have created an extensive video library showing visual animations regarding numerous heart lesions. Ruby and Beau are a fantastic duo making the comprehension level suitable for children as well, if you have a sibling you would like to better understand that condition, too. ",
+				"Ranked #1 in the nation for pediatric cardiac surgery, Texas Children's have created an extensive video library showing visual animations regarding numerous heart lesions. Ruby and Beau are a fantastic duo making the comprehension level suitable for children as well.",
 		},
 	],
 	therapy: [

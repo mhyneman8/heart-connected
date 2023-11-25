@@ -58,9 +58,11 @@ export default function Network() {
 						is strongly encouraged, but not necessary.{' '}
 					</div>
 				</div>
-				<Link href='/forum'>
-					Have more questions? Ask the Heart Connected Community
-				</Link>
+				<div className='flex justify-center m-auto mb-20'>
+					<Link href='/forum'>
+						Have more questions? Ask the Heart Connected Community
+					</Link>
+				</div>
 			</div>
 		</div>
 	);

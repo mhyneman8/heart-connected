@@ -149,12 +149,12 @@ export default function Learn() {
 					please visit the&#160;
 					<ExternalLink
 						link='https://www.heart.org/en/health-topics/congenital-heart-defects/about-congenital-heart-defects'
-						name='AHA'
+						name="American Heart Association's"
 					/>
 					&#160;or&#160;
 					<ExternalLink
 						link='https://www.cdc.gov/ncbddd/heartdefects/index.html'
-						name='CDC'
+						name="Center for Disease Control and Prevention's"
 					/>
 					&#160;website. You can also view a visual representation of the
 					developing heart below.

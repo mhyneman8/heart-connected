@@ -25,37 +25,38 @@ export default function Calculator() {
 
 			<div className='body px-10 mt-[-20px] max-w-[900px] mb-20 flex justify-center flex-col m-auto'>
 				<div className={paragraphStyles}>
-					Our goal is to develop a trauma response risk calculator that will
-					help you and your healthcare providers appreciate your unique
-					situation and be better able to tailor resources to alleviate the
-					burden of congenital heart disease on your family and other families
-					in this extensive community.
+					Our goal is to develop a risk assessment tool that will help you and
+					your healthcare providers identify the right resources for your unique
+					situation that will influence your experience with the most common
+					group of defects present at the birth of your child. In time, this
+					risk assessment will be able to lighten at least some of the struggles
+					that are often experienced when taking care of a child with CHD
 				</div>
 				<div className={paragraphStyles}>
-					The Calculator is provided is not a validated tool and is for
+					The calculator is provided is not a validated tool and is for
 					informational purposes only. Do not substitute this information for
 					professional medical or psychological counseling, diagnosis, or
 					treatment. It is designed to offer a rough estimate of potential risk
 					factors related to trauma response following a CHD diagnosis. Users of
-					the Calculator understand and acknowledge that they are using it at
+					the calculator understand and acknowledge that they are using it at
 					their own discretion and risk.
 				</div>
 				<div className={paragraphStyles}>
 					<span className='font-bold'>
-						The Calculator does not provide medical or psychological advice,
+						The calculator does not provide medical or psychological advice,
 						diagnosis, or treatment recommendations.
 					</span>{' '}
 					{''}
-					Users should not interpret the results of the Calculator as a
+					Users should not interpret the results of the calculator as a
 					definitive assessment of their condition or the condition of their
 					child. Any concerns or questions regarding health or mental health
 					should be discussed with qualified healthcare professionals.
 				</div>
 				<div className={paragraphStyles}>
-					<div className='font-bold mt-8'>Limitations of the Calculator:</div>
+					<div className='font-bold mt-8'>Limitations of the calculator:</div>
 					<ul className='list-disc ml-5 max-w-[600px]'>
 						<li className='pb-2'>
-							The Calculator is based on generalized risk factors and weightings
+							The calculator is based on generalized risk factors and weightings
 							and may not accurately reflect individual circumstances.
 						</li>
 						<li className='pb-2'>
@@ -63,7 +64,7 @@ export default function Calculator() {
 							take into consideration the unique complexities of each situation.
 						</li>
 						<li>
-							The Calculator does not guarantee accuracy, completeness, or
+							The calculator does not guarantee accuracy, completeness, or
 							reliability.
 						</li>
 					</ul>
@@ -76,7 +77,7 @@ export default function Calculator() {
 							className={styles.primaryBtn}
 							onClick={() => handleCalcOpen()}
 						>
-							Determine Your Trauma Response Risk
+							Identify Your Trauma Response Risk Factors
 						</button>
 					</div>
 				)}
