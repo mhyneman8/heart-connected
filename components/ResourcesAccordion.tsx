@@ -9,7 +9,7 @@ type Content = {
 	width: number;
 	height: number;
 	link: string;
-	description: string;
+	description: any;
 };
 
 type Props = {
@@ -61,8 +61,9 @@ export default function ResourceAccordion(props: Props) {
 			>
 				<ul className='m-auto mt-4 text-xl flex justify-center flex-col px-3'>
 					{props.content.map((resource: Content) => (
+						// {const description = JSON.parse(JSON.stringify(resource.desctiption))}
 						<li key={resource.key}>
-							<div className='flex col items-center'>
+							<div className='flex col items-center indent-0'>
 								{resource.imgSrc && (
 									<ImageNext
 										src={resource.imgSrc}
@@ -79,7 +80,9 @@ export default function ResourceAccordion(props: Props) {
 									/>
 								</div>
 							</div>
-							<div className='ml-1 text-sm mb-5'>{resource.description}</div>
+							<div className='ml-1 text-sm mb-5'>
+								{JSON.parse(JSON.stringify(resource.description))}
+							</div>
 						</li>
 					))}
 				</ul>

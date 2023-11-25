@@ -58,7 +58,9 @@ export default function Network() {
 						is strongly encouraged, but not necessary.{' '}
 					</div>
 				</div>
-				<Link href='/forum'>Go to our forums</Link>
+				<Link href='/forum'>
+					Have more questions? Ask the Heart Connected Community
+				</Link>
 			</div>
 		</div>
 	);

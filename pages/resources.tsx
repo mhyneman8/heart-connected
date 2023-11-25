@@ -18,7 +18,7 @@ export default function Resources() {
 			/>
 
 			<div className='body flex flex-col justify-center mb-8 mt-[-30px] para'>
-				<div className='m-auto  max-w-lg'>
+				<div className='m-auto  max-w-lg my-4 para'>
 					It can be overwhelming when scouring the internet for information
 					regarding congenital heart disease. If you are interested in learning
 					more about CHD and the development of the heart, in general please{' '}
@@ -33,7 +33,7 @@ export default function Resources() {
 					noted that if you ever have questions, you should feel comfortable
 					reaching out to your provider.
 				</div>
-				<div className='m-auto  max-w-lg text-sm my-4 para'>
+				<div className='m-auto  max-w-lg my-4 para'>
 					Taking care of a health child is a challenging and emotionally taxing
 					task. Caring for a sick child with CHD can make the struggles even
 					harder. Despite advancements in medical and surgical management of
@@ -80,8 +80,10 @@ export default function Resources() {
 				<a href='mailto:connected.hearts@gmail.com'>
 					connected.hearts@gmail.com
 				</a>
-				<br></br>Or go to {''}
-				<Link href='/network#forum'>our forums</Link>
+				<br></br>
+				<Link href='/forum'>
+					Have more questions? Ask the Heart Connected Community
+				</Link>
 			</div>
 		</div>
 	);

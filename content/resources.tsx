@@ -47,7 +47,7 @@ const resources: ResourceType = {
 		},
 		{
 			key: 'hdf',
-			imgSrc: '/',
+			imgSrc: '/hdf-logo.png',
 			width: 20,
 			height: 20,
 			link: 'https://www.heartfeltdreamsfoundation.org/',
@@ -57,7 +57,7 @@ const resources: ResourceType = {
 		},
 		{
 			key: 'chf',
-			imgSrc: '/',
+			imgSrc: '/chf-logo.png',
 			width: 20,
 			height: 20,
 			link: 'https://www.childrensheartfoundation.org/',
@@ -89,7 +89,7 @@ const resources: ResourceType = {
 		},
 		{
 			key: 'chp',
-			imgSrc: '/',
+			imgSrc: '/chp-logo.png',
 			width: 20,
 			height: 20,
 			link: 'https://www.chop.edu/centers-programs/cardiac-center',
@@ -99,7 +99,7 @@ const resources: ResourceType = {
 		},
 		{
 			key: 'tc',
-			imgSrc: '/',
+			imgSrc: '/tch-logo.png',
 			width: 20,
 			height: 20,
 			link: 'https://www.texaschildrens.org/departments/cardiology/ruby-beau',
@@ -111,7 +111,7 @@ const resources: ResourceType = {
 	therapy: [
 		{
 			key: 'dc',
-			imgSrc: '/',
+			imgSrc: '/dc-logo.png',
 			width: 20,
 			height: 20,
 			link: 'https://depthcounseling.org/',
@@ -121,7 +121,7 @@ const resources: ResourceType = {
 		},
 		{
 			key: 'op',
-			imgSrc: '/',
+			imgSrc: '/op-logo.png',
 			width: 20,
 			height: 20,
 			link: 'https://openpathcollective.org/',
@@ -131,7 +131,7 @@ const resources: ResourceType = {
 		},
 		{
 			key: 'lo',
-			imgSrc: '/',
+			imgSrc: '/lo-logo.png',
 			width: 20,
 			height: 20,
 			link: 'https://liveoakchicago.com/',
@@ -141,10 +141,10 @@ const resources: ResourceType = {
 		},
 		{
 			key: 'hbh',
-			imgSrc: '/',
+			imgSrc: '/hbh-logo.png',
 			width: 20,
 			height: 20,
-			link: '',
+			link: 'https://howardbrown.org/service/behavioral-health/',
 			text: 'Howard Brown Health',
 			description:
 				'Howard Brown Health is a Chicago-based health service partner who provides sliding-scale services with an approach to incorporate primary care services in the loop to help with overall health. They offer psychiatric care and behavioral counseling with a focus on trauma informed care.',

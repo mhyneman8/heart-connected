@@ -84,9 +84,9 @@ export default function Forum() {
 					id='forum'
 				>
 					<div className='para mb-10 w-9/12 text-base m-auto'>
-						Welcome to our Heartful Families Forum, a dedicated space for
-						families navigating the journey of Congenital Heart Defects (CHD)
-						diagnosis. Here, we come together as a supportive community to share
+						Welcome to our Heart Connected forum, a dedicated space for families
+						navigating the journey of Congenital Heart Defects (CHD) diagnosis.
+						Here, we come together as a supportive community to share
 						experiences, offer guidance, and foster connections that transcend
 						the challenges posed by CHD.
 					</div>
