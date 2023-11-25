@@ -58,6 +58,12 @@ export default function Navigation() {
 						Learn
 					</Link>
 					<Link
+						href='/forum'
+						className={desktopItemsStyle}
+					>
+						Forum
+					</Link>
+					<Link
 						href='/resources'
 						className={desktopItemsStyle}
 					>
@@ -97,6 +103,12 @@ export default function Navigation() {
 							className={mobileItemStyle}
 						>
 							Learn
+						</Link>
+						<Link
+							href='/forum'
+							className={mobileItemStyle}
+						>
+							Forum
 						</Link>
 						<Link
 							href='/resources'
