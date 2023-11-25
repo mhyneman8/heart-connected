@@ -6,7 +6,7 @@ import { useState } from 'react';
 export default function Navigation() {
 	const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);
 	const desktopItemsStyle =
-		'block inline-block mt-0 mr-4 no-underline hover:underline text-white';
+		'block inline-block mt-0 mr-4 no-underline hover:underline hover:text-purple text-white';
 	const mobileItemStyle = 'block mt-4 no-underline text-white hover:underline';
 	const handleNavOpen = () => {
 		setMobileNavOpen(!mobileNavOpen);
