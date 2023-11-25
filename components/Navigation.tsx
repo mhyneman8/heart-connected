@@ -12,7 +12,7 @@ export default function Navigation() {
 		setMobileNavOpen(!mobileNavOpen);
 	};
 	return (
-		<nav className='flex z-30 items-center fixed top-0 left-0 right-0 rounded-b-md justify-between flex-wrap bg-gradient-to-r from-cyan from-20% via-indigo via-70% to-purple to-100% p-6'>
+		<nav className='flex z-50 items-center fixed top-0 left-0 right-0 rounded-b-md justify-between flex-wrap bg-gradient-to-r from-cyan from-20% via-indigo via-70% to-purple to-100% p-6'>
 			<div className='flex items-center flex-shrink-0 text-white mr-6'>
 				<Link href='/'>
 					<Image

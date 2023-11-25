@@ -25,13 +25,12 @@ export default function Learn() {
 				heading='What is Congenital Heart Disease?'
 			/>
 
-			<div className='body text-black md:px-10 px-5 flex justify-center flex-col'>
+			<div className='body text-black md:px-10 px-5 flex justify-center flex-col max-w-[900px] m-auto'>
 				<h3 className='font-bold mb-6 text-center'>
 					Structural{' '}
 					<Tooltip
 						image='/heartpics/Normal.jpg'
 						imgAlt=''
-						left={true}
 						text='The anatomical heart consists of four chambers. The upper chambers, or atria, which receive blood from the body and lungs; and the lower chambers, or ventricles, which send blood to the body and the lungs. The heart functions as the pump and connection between these two different systems to obtain oxygen from the lungs and deliver it to all the other organs, like the brain, stomach, kidneys, and more. In normal anatomy, the right atrium receives blood from the body and directs it to the right ventricle which sends blood via the pulmonary arteries to the lungs for oxygenation. The left atrium receives oxygen-rich blood, directing it to the left ventricle which sends the blood via the aorta to the rest of the body.'
 					>
 						Heart Development{' '}
@@ -42,7 +41,7 @@ export default function Learn() {
 					This page will give you a concise overview of the early stages of
 					cardiac development and the formation of structural heart defects. In
 					this section, we will explore the following topics:
-					<ul className='list-disc mt-3'>
+					<ul className='list-disc mt-3 indent-0'>
 						{overview.map((subject) => (
 							<li
 								key={subject.title}
@@ -67,13 +66,13 @@ export default function Learn() {
 					<p className='my-auto'>
 						Inappropriate attachment of the pulmonary veins leads to a complex
 						cardiac lesion, called{' '}
-						{/* <Tooltip
+						<Tooltip
 							text='Totally anomalous pulmonary venous return (TAPVR) is a lesion that results from inappropriate placement of the pulmonary veins (vessels returning blood to the left atrium). The severity of this defect depends on the attachment of the veins, as they can fuse to the vena cava (the large vein returning blood to the right atrium), either above or below the heart, or to a different chamber of the heart itself.'
 							image='/heartpics/TAPVR.jpg'
 							imgAlt=''
-						> */}
-						TAPVR (totally anomalous pulmonary venous return),
-						{/* </Tooltip>{' '} */}
+						>
+							TAPVR (totally anomalous pulmonary venous return),
+						</Tooltip>{' '}
 						whose severity depends their exact attachment location.
 					</p>
 				</div>
@@ -94,7 +93,6 @@ export default function Learn() {
 						imgAlt=''
 						image2='/heartpics/VSD.jpg'
 						img2Alt=''
-						left={true}
 					>
 						ASD and VSD
 					</Tooltip>
