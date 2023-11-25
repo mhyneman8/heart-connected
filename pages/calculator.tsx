@@ -20,15 +20,16 @@ export default function Calculator() {
 			<Heading
 				credit={''}
 				imgSrc={'/pics/Strength_connection.jpg'}
-				heading='Risk Calculator'
+				heading='Trauma Response Risk Calculator'
 			/>
 
-			<div className='body px-10 mt-[-20px]'>
+			<div className='body px-10 mt-[-20px] max-w-[900px] mb-20 flex justify-center flex-col m-auto'>
 				<div className={paragraphStyles}>
-					Our goal is to develop a risk calculator that will help you and your
-					healthcare providers appreciate your unique situation and be better
-					able to tailor resources to alleviate the burden of congenital heart
-					disease on your family and other families in this extensive community.
+					Our goal is to develop a trauma response risk calculator that will
+					help you and your healthcare providers appreciate your unique
+					situation and be better able to tailor resources to alleviate the
+					burden of congenital heart disease on your family and other families
+					in this extensive community.
 				</div>
 				<div className={paragraphStyles}>
 					The Calculator is provided is not a validated tool and is for
@@ -51,8 +52,8 @@ export default function Calculator() {
 					should be discussed with qualified healthcare professionals.
 				</div>
 				<div className={paragraphStyles}>
-					<div className='font-bold'>Limitations of the Calculator:</div>
-					<ul className='list-disc ml-5'>
+					<div className='font-bold mt-8'>Limitations of the Calculator:</div>
+					<ul className='list-disc ml-5 max-w-[600px]'>
 						<li className='pb-2'>
 							The Calculator is based on generalized risk factors and weightings
 							and may not accurately reflect individual circumstances.
@@ -70,12 +71,12 @@ export default function Calculator() {
 				{showCalculator ? (
 					<Calc setShowCalculator={setShowCalculator} />
 				) : (
-					<div className='w-full flex'>
+					<div className='w-full flex justify-center my-8'>
 						<button
 							className={styles.primaryBtn}
 							onClick={() => handleCalcOpen()}
 						>
-							Start the Risk Calculator
+							Determine Your Trauma Response Risk
 						</button>
 					</div>
 				)}
