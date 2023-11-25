@@ -35,10 +35,6 @@ export default function NetworkModal({ setShowModal }: Props) {
 		});
 	};
 
-	const handleBlur = async (e: React.FocusEvent<HTMLInputElement>) => {
-		setErrorMessages(await validate(formData));
-	};
-
 	const handleSubmit = async () => {
 		console.log('submit');
 		setErrorMessages(await validate(formData));
@@ -50,11 +46,10 @@ export default function NetworkModal({ setShowModal }: Props) {
 		) {
 			console.log('no error');
 			setThankYou(true);
-			setTimeout(() => {
-				setShowModal(false);
-			}, 10000);
+			// setTimeout(() => {
+			// 	setShowModal(false);
+			// }, 10000);
 		}
-		console.log('errror');
 	};
 
 	const validate = async (formValues: any) => {
@@ -113,8 +108,6 @@ export default function NetworkModal({ setShowModal }: Props) {
 		return error;
 	};
 
-	// const labelStyle =
-	// 	'inline text-black text-sm font-bold mb-1 ml-1 text-left';
 	const inputStyle =
 		'shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-black';
 	const errorStyle = 'text-red-500 text-xs';
@@ -122,7 +115,10 @@ export default function NetworkModal({ setShowModal }: Props) {
 	return (
 		<div className='text-center'>
 			<>
-				<div className='opacity-40 bg-black fixed inset-0 z-40'></div>
+				<div
+					id='overlay'
+					className='opacity-40 bg-black fixed inset-0 z-40'
+				></div>
 				<div className='flex justify-center items-center overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none'>
 					<div className='relative w-9/12 max-w-screen-sm my-6 mx-auto max-w-3xl'>
 						<div className='border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none'>
@@ -143,11 +139,10 @@ export default function NetworkModal({ setShowModal }: Props) {
 							{thankYou ? (
 								<div className='message'>
 									<div className='title text-4xl p-5'>
-										Thank you {formData.first} for joining us!
+										Thanks for joining, {formData.first}!
 									</div>
 									<div className='content text-lg p-8 mx-10'>
-										You will receive an email shortly with other community
-										members contact information
+										We&apos;ll reach out to you shortly.
 									</div>
 								</div>
 							) : (
