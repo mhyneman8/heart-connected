@@ -9,7 +9,7 @@ type Heading = {
 export default function Heading({ heading, imgSrc, credit }: Heading) {
 	return (
 		// <div className="hero flex flex-col justify-center mb-20">
-		<div className='hero h-full ml-[-20px] w-screen max-w-[1000px] m-auto flex flex-col justify-end relative mb-20'>
+		<div className='hero h-full w-screen max-w-[1000px] m-auto flex flex-col justify-end relative mb-20'>
 			<div className='relative mt-[75px] h-[292px] md:h-[475px]'>
 				<Image
 					src={imgSrc}
@@ -27,7 +27,9 @@ export default function Heading({ heading, imgSrc, credit }: Heading) {
 					{heading}
 				</div>
 			</div>
-			<div className='absolute bottom-[-35px] right-5 text-xs max-w-xs'>{credit}</div>
+			<div className='absolute bottom-[-35px] right-5 text-xs max-w-xs'>
+				{credit}
+			</div>
 			{/* <div className="title text-7xl mx-auto mt-32 mb-16 text-center">{heading}</div> */}
 		</div>
 	);
