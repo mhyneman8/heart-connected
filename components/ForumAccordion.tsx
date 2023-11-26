@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { db } from '../firebase/clientApp';
 import { updateDoc, doc, arrayUnion } from '@firebase/firestore';
+import styles from '@/components/styles.module.css';
 
 type Props = {
 	question: string;
@@ -18,28 +19,24 @@ export default function ForumAccordion(props: Props) {
 	};
 
 	const addComment = (e: any) => {
-
 		e.preventDefault();
 		const docRef = doc(db, 'forums', props.id);
-		comments.push(newComment)
+		comments.push(newComment);
 		updateDoc(docRef, {
 			comments: arrayUnion(newComment),
-		})
-		.then(() => {
-			setNewComment('')
-		})
-	}
+		}).then(() => {
+			setNewComment('');
+		});
+	};
 
 	const handleChange = (e: any) => {
-		console.log(e.target.value)
-		setNewComment(e.target.value)
-		console.log('setnewcomment', newComment)
-	}
+		setNewComment(e.target.value);
+	};
 
 	return (
 		<div className='my-2'>
 			<button
-				className='font-bold flex bg-white items-center justify-between w-full p-3 text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-1 focus:ring-teal hover:bg-gray-100'
+				className='font-bold gap-2 min-h-[60px] flex bg-white items-center justify-between w-full p-3 text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-1 focus:ring-teal hover:bg-gray-100 '
 				onClick={toggle}
 				type='button'
 				style={{
@@ -71,16 +68,15 @@ export default function ForumAccordion(props: Props) {
 				style={{ display: isShowing ? 'block' : 'none', padding: '5px' }}
 				className='bg-white rounded-b-xl p-6 text-black shadow-lg'
 			>
-			{ comments.map((comment, index) => (
-				<div
-					key={index}
-					className='px-2'
-					dangerouslySetInnerHTML={{
-						__html: comment,
-					}}
-				/>
-
-			))}
+				{comments.map((comment, index) => (
+					<div
+						key={index}
+						className='px-6 border-t py-5'
+						dangerouslySetInnerHTML={{
+							__html: comment,
+						}}
+					/>
+				))}
 				<div className='border-t mt-3'>
 					<form
 						className='pl-3 pb-3'
@@ -101,6 +97,7 @@ export default function ForumAccordion(props: Props) {
 							/>
 						</label>
 						<button
+							className={styles.secondaryBtn}
 							type='submit'
 						>
 							Add Comment
