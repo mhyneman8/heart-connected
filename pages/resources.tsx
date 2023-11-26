@@ -17,7 +17,10 @@ export default function Resources() {
 				heading='Resources for Those With Congenital Heart Disease'
 			/>
 
-			<div className='body flex flex-col justify-center mb-8 mt-[-30px] para'>
+			<div
+				id='body'
+				className='body flex flex-col justify-center mb-8 mt-[-30px] para'
+			>
 				<div className='m-auto  max-w-lg my-4 para'>
 					It can be overwhelming as you begin your search for information
 					regarding congenital heart disease. Here we have strived to do some of

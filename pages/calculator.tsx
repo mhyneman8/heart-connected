@@ -23,7 +23,10 @@ export default function Calculator() {
 				heading='Trauma Response Risk Calculator'
 			/>
 
-			<div className='body px-10 mt-[-20px] max-w-[900px] mb-20 flex justify-center flex-col m-auto'>
+			<div
+				id='body'
+				className='body px-10 mt-[-20px] max-w-[900px] mb-20 flex justify-center flex-col m-auto'
+			>
 				<div className={paragraphStyles}>
 					Our goal is to develop a risk assessment tool that will help you and
 					your healthcare providers identify the right resources for your unique

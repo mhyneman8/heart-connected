@@ -19,20 +19,6 @@ type Forum = {
 	comments: Array<string>;
 	id: string;
 };
-// export default function Forum() {
-// 	return (
-// 		<div className='max-w-[1000px] m-auto'>
-// 			<Navigation />
-// 			<Heading
-// 				credit={''}
-// 				imgSrc={'/pics/Therapy_Resources.jpg'}
-// 				heading='Resources for Those With Congenital Heart Disease'
-// 			/>
-
-// 			<div className='body flex flex-col justify-center mb-8 mt-[-30px] para'></div>
-// 		</div>
-// 	);
-// }
 
 export default function Forum() {
 	const [loading, setLoading] = useState(true);
@@ -78,7 +64,10 @@ export default function Forum() {
 				imgSrc={'/morepics/Together.jpg'}
 				heading='Share, Support, Connect'
 			/>
-			<div className='body flex flex-col justify-center mb-8 mt-[-30px]'>
+			<div
+				id='body'
+				className='body flex flex-col justify-center mb-8 mt-[-30px]'
+			>
 				<div
 					className='flex flex-col justify-center m-auto max-w-[1000px] w-11/12'
 					id='forum'

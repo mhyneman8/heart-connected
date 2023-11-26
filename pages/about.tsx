@@ -17,7 +17,10 @@ export default function About() {
 					'Irving Park and Francisco in the Albany Park neighborhood of Chicago. Artist: Christian Paz.'
 				}
 			/>
-			<div className='body flex flex-col justify-center mb-10'>
+			<div
+				id='body'
+				className='body flex flex-col justify-center mb-10'
+			>
 				{aboutContent.map((section, index) => (
 					<div
 						key={index}

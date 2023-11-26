@@ -82,3 +82,29 @@
 	background-color: #84ceeb;
 	color: #191716;
 }
+
+.skipLink {
+	position: absolute;
+	overflow: hidden;
+	top: auto;
+	left: -10000px;
+	width: 1px;
+	height: 1px;
+	z-index: 40;
+	background-color: #fff;
+	color: #8860d0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 150px;
+	height: 40px;
+	border-radius: 999px;
+	text-decoration: none;
+}
+
+.skipLink:focus {
+	top: 10px;
+	left: 10px;
+	/* width: auto; */
+	/* height: auto; */
+}

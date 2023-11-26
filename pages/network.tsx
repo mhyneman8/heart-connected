@@ -18,7 +18,10 @@ export default function Network() {
 				imgSrc={'/pics/Strength_connection.jpg'}
 				heading='Join the Heart Connected Community'
 			/>
-			<div className='body'>
+			<div
+				id='body'
+				className='body'
+			>
 				{showModal && <NetworkModal setShowModal={setShowModal} />}
 
 				<div className='h6 w-3/4 m-auto mb-8 text-lg'>
