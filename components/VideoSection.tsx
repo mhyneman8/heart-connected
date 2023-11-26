@@ -56,10 +56,17 @@ export default function VideoSection() {
 							<div className="z-10 justify-center align-center flex'">
 								<Image
 									src={video.imgSrc}
-									width={384}
+									width={400}
 									height={200}
 									alt={video.copy}
 									className='rounded-lg'
+								/>
+								<Image
+									src='/play.png'
+									width={100}
+									height={100}
+									alt=''
+									className='absolute top-2/4 left-2/4 -translate-y-1/2 -translate-x-1/2'
 								/>
 							</div>
 							<div className='text-xs text-left'>{video.caption}</div>

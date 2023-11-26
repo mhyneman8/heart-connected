@@ -191,13 +191,20 @@ export default function Learn() {
 								alt='Congenital Heart Defects Explained: Tetralogy of Fallot'
 								className='rounded-lg'
 							/>
+							<Image
+								src='/play.png'
+								width={100}
+								height={100}
+								alt=''
+								className='absolute top-2/4 left-2/4 -translate-y-1/2 -translate-x-1/2'
+							/>
 						</div>
 						<div className='text-xs text-left'>
 							Learning that your child has a congenital heart defect like
-							Tetralogy of Fallot can be scary. At the Children’s Healthcare of
-							Atlanta Heart Center, our team of experts is here to provide care
-							for children with Tetralogy of Fallot and provide the best care
-							possible so that they can live healthy lives.
+							Tetralogy of Fallot can be scary. At the Children&apos;s
+							Healthcare of Atlanta Heart Center, our team of experts is here to
+							provide care for children with Tetralogy of Fallot and provide the
+							best care possible so that they can live healthy lives.
 						</div>
 					</button>
 				</div>
@@ -215,6 +222,13 @@ export default function Learn() {
 								height={200}
 								alt='Development of the ventricles and large arterial vessels'
 								className='rounded-lg'
+							/>
+							<Image
+								src='/play.png'
+								width={100}
+								height={100}
+								alt=''
+								className='absolute top-2/4 left-2/4 -translate-y-1/2 -translate-x-1/2'
 							/>
 						</div>
 						<div className='text-xs text-left'>
