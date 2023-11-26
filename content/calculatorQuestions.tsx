@@ -12,8 +12,8 @@ const calcQuestions: CalcQuestions[] = [
 			'Which of the following defines your relationship to your family member with CHD.',
 		questionNumber: 1,
 		choices: [
-			['Mother', 1, 'mother test'],
-			['Father', 0],
+			['Birthing Parent', 1, 'mother test'],
+			['Co-Parent', 0],
 			['Sibling', 0],
 			['Extended Family', 0],
 		],
