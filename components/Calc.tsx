@@ -7,6 +7,10 @@ type Props = {
 	setShowCalculator: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
+type questions = {
+	key: string | number;
+};
+
 export default function Calc({ setShowCalculator }: Props) {
 	const [selectedAnswerIndex, setSelectedAnswerIndex] = useState<null | number>(
 		null
@@ -15,6 +19,8 @@ export default function Calc({ setShowCalculator }: Props) {
 	const [showResult, setShowResult] = useState(false);
 	const [activeQuestion, setActiveQuestion] = useState(0);
 	const [selectedAnswer, setSelectedAnswer] = useState(0);
+	const [selectedAdvice, setSelectedAdvice] = useState('');
+	const [advice, setAdvice] = useState<string[]>([]);
 
 	const questions = calcQuestions;
 	const { question, choices, questionNumber } = questions[activeQuestion];
@@ -22,15 +28,21 @@ export default function Calc({ setShowCalculator }: Props) {
 	const selectedAnswerStyles =
 		'bg-indigo border-purple w-fit px-5 mb-4 py-1 rounded-full hover:cursor-pointer';
 
-	const handleSelected = (value: number, index: number) => {
+	const handleSelected = (item: questions, index: number) => {
+		const valueProp = item[2] as string;
+		const value = item[1];
 		setSelectedAnswer(value);
 		setSelectedAnswerIndex(index);
+		setSelectedAdvice(valueProp);
+		console.log('selected', selectedAdvice);
 	};
 
 	const onClickNext = () => {
+		console.log('next', advice);
 		setScore(selectedAnswer + score);
 		setSelectedAnswerIndex(null);
-
+		if (selectedAdvice !== undefined) setAdvice([...advice, selectedAdvice]);
+		console.log('after', advice);
 		if (activeQuestion !== questions.length - 1) {
 			setActiveQuestion((prev) => prev + 1);
 		} else {
@@ -45,6 +57,7 @@ export default function Calc({ setShowCalculator }: Props) {
 		setActiveQuestion(0);
 		setSelectedAnswer(0);
 		setShowResult(false);
+		setAdvice([]);
 	};
 
 	const handleClose = () => {
@@ -58,16 +71,18 @@ export default function Calc({ setShowCalculator }: Props) {
 			<div className='opacity-40 bg-black fixed inset-0 z-40 overflow-hidden'></div>
 			<div className='overflow-y-auto fixed max-w-[520px] inset-0 z-50 outline-none focus:outline-none border-0 my-10 mx-auto w-max-[500px] p-8 rounded-lg shadow-lg flex flex-col bg-white outline-none focus:outline-none'>
 				<button
-					className='absolute right-20'
+					className='absolute right-10'
 					onClick={() => handleClose()}
 				>
 					X
 				</button>
-				<h1 className='font-bold text-lg mb-3'>Risk Level Estimator</h1>
+				<h1 className='font-bold text-lg mb-3'>Trauma Risk Factors</h1>
 				{showResult ? (
 					<div className='mt-8'>
-						<RiskAnswer score={score} />
-						{/* Total (for testing purposes): {score} */}
+						<RiskAnswer
+							score={score}
+							valueProps={advice}
+						/>
 						<div className='w-full flex justify-center items-center mt-10'>
 							<button
 								className={styles.primaryBtn}
@@ -90,7 +105,7 @@ export default function Calc({ setShowCalculator }: Props) {
 						<ul className='ml-6'>
 							{choices.map((item, index) => (
 								<li
-									onClick={() => handleSelected(item[1], index)}
+									onClick={() => handleSelected(item, index)}
 									key={index}
 									className={
 										selectedAnswerIndex === index
