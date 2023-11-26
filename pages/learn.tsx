@@ -142,7 +142,13 @@ export default function Learn() {
 					</Tooltip>{' '}
 					or a bicuspid (two leaf, rather than the expected three leaf) aortic
 					valve, which can present with early tricuspid incompetency, aortic
-					calcification, and/or heart failure. <a href='#citation'>1</a>
+					calcification, and/or heart failure.{' '}
+					<a
+						href='#citation'
+						className='text-[8px] align-super'
+					>
+						1
+					</a>
 				</p>
 				<p className={paraStyles}>
 					For more details pertaining to the development of a specific lesion
