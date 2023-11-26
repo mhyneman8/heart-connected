@@ -2,13 +2,10 @@ import { ReactEventHandler, useState } from 'react';
 import RiskAnswer from '@/components/RiskAnswers';
 import calcQuestions from '@/content/calculatorQuestions';
 import styles from './styles.module.css';
+import SeverityClassification from '@/components/SeverityClassification';
 
 type Props = {
 	setShowCalculator: React.Dispatch<React.SetStateAction<boolean>>;
-};
-
-type questions = {
-	key: string | number;
 };
 
 export default function Calc({ setShowCalculator }: Props) {
@@ -28,21 +25,24 @@ export default function Calc({ setShowCalculator }: Props) {
 	const selectedAnswerStyles =
 		'bg-indigo border-purple w-fit px-5 mb-4 py-1 rounded-full hover:cursor-pointer';
 
-	const handleSelected = (item: questions, index: number) => {
+	const handleSelected = (
+		item: Array<string | number | undefined>,
+		index: number
+	) => {
 		const valueProp = item[2] as string;
-		const value = item[1];
+		const value = item[1] as number;
+		console.log(item);
+
 		setSelectedAnswer(value);
 		setSelectedAnswerIndex(index);
 		setSelectedAdvice(valueProp);
-		console.log('selected', selectedAdvice);
 	};
 
 	const onClickNext = () => {
-		console.log('next', advice);
 		setScore(selectedAnswer + score);
 		setSelectedAnswerIndex(null);
 		if (selectedAdvice !== undefined) setAdvice([...advice, selectedAdvice]);
-		console.log('after', advice);
+
 		if (activeQuestion !== questions.length - 1) {
 			setActiveQuestion((prev) => prev + 1);
 		} else {
@@ -61,7 +61,6 @@ export default function Calc({ setShowCalculator }: Props) {
 	};
 
 	const handleClose = () => {
-		console.log('clicked');
 		document.querySelector('body')!.style.overflow = 'auto';
 		setShowCalculator(false);
 	};
@@ -81,9 +80,9 @@ export default function Calc({ setShowCalculator }: Props) {
 					<div className='mt-8'>
 						<RiskAnswer
 							score={score}
-							valueProps={advice}
+							types={advice}
 						/>
-						<div className='w-full flex justify-center items-center mt-10'>
+						<div className='w-full flex justify-center items-center mt-10 mb-5'>
 							<button
 								className={styles.primaryBtn}
 								onClick={() => startOver()}
@@ -102,7 +101,8 @@ export default function Calc({ setShowCalculator }: Props) {
 							Question {questionNumber} / 9
 						</div>
 						<h2 className='mb-4'>{question}</h2>
-						<ul className='ml-6'>
+						{questionNumber === 5 && <SeverityClassification />}
+						<ul className='ml-6 mt-7'>
 							{choices.map((item, index) => (
 								<li
 									onClick={() => handleSelected(item, index)}
@@ -129,7 +129,7 @@ export default function Calc({ setShowCalculator }: Props) {
 					</div>
 				)}
 				<div className='flex justify-center '>
-					<div className='caption absolute bottom-10 sm:bottom-4 max-w-sm text-center m-auto'>
+					<div className='caption max-w-sm text-center m-auto'>
 						To better help us formulate an accurate risk factor please consider
 						also filling out {''}
 						<a href=''>our survey</a>.
