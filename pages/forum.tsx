@@ -1,11 +1,5 @@
 import Heading from '@/components/Heading';
 import Navigation from '@/components/Navigation';
-import ExternalLink from '@/components/ExternalLink';
-import ImageNext from 'next/image';
-import resources from '@/content/resources';
-import Link from 'next/link';
-import ResourcesAccordion from '@/components/ResourcesAccordion';
-import Image from 'next/image';
 import { db } from '../firebase/clientApp';
 import { collection, query, addDoc, onSnapshot } from '@firebase/firestore';
 import { useState, useEffect, ReactEventHandler } from 'react';
@@ -44,7 +38,7 @@ export default function Forum() {
 			documentSnapshot.forEach((doc) => {
 				forumsArr.push({ id: doc.id, ...doc.data() });
 			});
-			console.log(forumsArr);
+
 			setForums(forumsArr);
 		});
 		setTimeout(() => {
