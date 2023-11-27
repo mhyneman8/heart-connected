@@ -15,7 +15,6 @@ type Props = {
 
 function Tooltip(props: Props) {
 	const { text, image, image2, imgAlt, img2Alt, children, text2 } = props;
-
 	return (
 		<div className={styles.tooltip}>
 			<span className='underline text-purple hover:text-indigo'>

@@ -46,10 +46,11 @@ export default function Home() {
 					</div>
 					<div className='body w-3/4 m-auto mb-8 text-lg para'>
 						The goal of Heart Connected is to provide community, education and
-						support for those with Congenital Heart Diseases and their loved
-						ones. Founded by medical professionals who are passionate about
-						cardiac care, Heart Connected seeks to help make living with a
-						congenital heart disease diagnosis just a little easier.
+						support for those with congenital heart diseases and their loved
+						ones. Founded by medical professionals who are passionate about all
+						aspects of caring for a family impacted by CHD, Heart Connected
+						seeks to help make living with a congenital heart disease diagnosis
+						just a little easier.
 					</div>
 				</div>
 			</div>

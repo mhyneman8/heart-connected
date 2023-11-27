@@ -68,8 +68,8 @@ export default function Forum() {
 				>
 					<div className='para mb-10 w-9/12 text-base m-auto'>
 						Welcome to our Heart Connected forum, a dedicated space for families
-						navigating the journey of Congenital Heart Defects (CHD) diagnosis.
-						Here, we come together as a supportive community to share
+						navigating the journey of a congenital heart disease (CHD)
+						diagnosis. Here, we come together as a supportive community to share
 						experiences, offer guidance, and foster connections that transcend
 						the challenges posed by CHD.
 					</div>
@@ -81,7 +81,7 @@ export default function Forum() {
 						understand, our forum is a haven where hearts unite, and the love
 						and resilience of our families shine. Join us on this journey, where
 						each heartbeat is a testament to the power of community and the
-						unwavering strength found in the heartful bonds we share.
+						unwavering strength found in the heartfelt bonds we share.
 					</div>
 					<div
 						className='flex flex-col mx-auto w-full justify-center mb-6'

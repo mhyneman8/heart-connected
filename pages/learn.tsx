@@ -37,10 +37,12 @@ export default function Learn() {
 					</Tooltip>{' '}
 					in a Nutshell:
 				</h3>
-				<div className='flex-col justify-center flex md:max-w-[70%] sm:max-w-[90%] mx-auto para'>
-					This page will give you a concise overview of the early stages of
-					cardiac development and the formation of structural heart defects. In
-					this section, we will explore the following topics:
+				<div className='flex-col font-base justify-center flex md:max-w-[70%] sm:max-w-[90%] mx-auto para'>
+					Congenital heart disease is an umbrella term that describes a group of
+					structural heart abnormalities that are present at the time of birth.
+					This page will provide a concise overview of the early stages of fetal
+					heart development and when and where some defects develop. In this
+					section, we will explore the following topics:
 					<ul className='list-disc mt-3 indent-0'>
 						{overview.map((subject) => (
 							<li
@@ -54,7 +56,7 @@ export default function Learn() {
 					</ul>
 				</div>
 				<div className='flex flex-row pt-8 justify-center'>
-					<p className='para'>
+					<p className='para font-base'>
 						Early cardiac development begins with single triple-layer pipe that
 						twists and folds upon itself creating a heart tube with an arterial
 						and venous pole and slow rhythmic contractions. Soon after the four
@@ -110,7 +112,7 @@ export default function Learn() {
 					is a complex VSD with additional features stemming from the exact
 					location of the lesion.
 				</p>
-				<p className='mt-8 para'>
+				<p className='mt-8 para font-base'>
 					After complete chamber differentiation and septum formation, the
 					outflow tracts (i.e., aorta and pulmonary arteries) develop and this
 					is where defects including{' '}
@@ -127,16 +129,15 @@ export default function Learn() {
 					, double outlet right ventricle (DORV) , and pulmonary atresia occur.
 				</p>
 
-				<p className='mt-8 para'>
+				<p className='mt-8 para font-base'>
 					Inappropriate outflow development can also lead to misplacement of the
 					coronary artery (vessels supplying the heart muscle). In the final
 					stages of structural development, atrioventricular (AV) and semi-lunar
 					valves form. Valve formation defects include{' '}
 					<Tooltip
-						text='Ebstein’s anomaly is a malformation of the tricuspid valve (connection between the right atrium and ventricle). Its large and inappropriate formation and alignment leads to backwards flow causing inefficient circulation into and through the pulmonary vessels.'
+						text="Ebstein's anomaly is a malformation of the tricuspid valve (connection between the right atrium and ventricle). Its large and inappropriate formation and alignment leads to backwards flow causing inefficient circulation into and through the pulmonary vessels."
 						image='/heartpics/Ebstein.jpg'
 						imgAlt=''
-						// left={true}
 					>
 						Ebstein&apos;s anomaly{' '}
 					</Tooltip>{' '}
@@ -237,7 +238,7 @@ export default function Learn() {
 								className='absolute top-2/4 left-2/4 -translate-y-1/2 -translate-x-1/2'
 							/>
 						</div>
-						<div className='text-xs text-left'>
+						<div className='text-sm text-left'>
 							Watch the development of the ventricles and large arterial vessels
 						</div>
 					</button>

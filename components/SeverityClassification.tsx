@@ -6,15 +6,15 @@ export default function SeverityClassification() {
 
 	const cyanotic = [
 		'Transposition of the great arteries',
-		'ToF, including pulmonary atresia and absent pulmonary valve',
+		'Tetralogy of Fallot, including pulmonary atresia and absent pulmonary valve',
 		'Hypoplastic right heart',
 		'Hypoplastic left heart',
 		'Single ventricle',
 		'Double outlet right ventricle',
 		'Truncus arteriosus',
-		'TAPVR',
+		'TAPVR (totally anomalous pulmonary venous return)',
 		'Critical pulmonary stenosis',
-		'Miscellaneous lesions, not specified elsewhere (e.g., doubleoutlet left ventricle)',
+		'Miscellaneous lesions, not specified elsewhere (e.g., double outlet left ventricle)',
 	];
 	const acyanotic = [
 		'Atrioventricular septal defect',
@@ -37,7 +37,7 @@ export default function SeverityClassification() {
 		'Small PDA',
 		'Mild pulmonary stenosis',
 		'Bicuspid aortic valve without aortic stenosis or incompetence (may worsen)',
-		'mall or spontaneously closed ASD',
+		'Small or spontaneously closed ASD',
 	];
 
 	return (

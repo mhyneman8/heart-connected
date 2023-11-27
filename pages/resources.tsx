@@ -36,28 +36,26 @@ export default function Resources() {
 					or a brief overview of expected heart development and when various
 					defects frequently develop. After you have received the diagnosis you
 					will also be referred to a pediatric heart specialist, they are an
-					invaluable resource and you should never hesitate to reach out with
-					any questions.
+					invaluable resource and you should never hesitate to reach out to your
+					team with any questions.
 				</div>
 				<div className='m-auto  max-w-lg my-4 para'>
-					It can be a challenging and emotionally taxing time taking care of a
-					child without health issues; caring for a sick child, especially with
-					CHD can is often even harder. Despite advancements in medical and
-					surgical management of kids with CHD, certain defects still have high
-					infant mortality rates and those that survive often spend months in
-					the hospital during their first year of life and/or beyond. It is
-					important to consider what you are comfortable or feel prepared to
-					handle. If you do not believe this is the right time or situation,
-					please do not hesitate to talk with you provider or{' '}
-					<Link
-						className='underline text-purple hover:text-teal'
-						href='https://www.plannedparenthood.org/'
-					>
-						visit Planned Parenthood.
-					</Link>{' '}
+					It is challenging and emotionally taxing taking care of a child
+					without health issues; caring for a sick child, especially with CHD is
+					even harder. Despite advancements in medical and surgical management,
+					certain defects still have high infant mortality rates and those that
+					survive often spend months in the hospital during their first year of
+					life and/or beyond. It is important to consider what you are
+					comfortable or feel prepared for. If you do not believe this is the
+					right time or circumstances, please do not hesitate to talk with you
+					provider or{' '}
+					<ExternalLink
+						link='https://www.plannedparenthood.org/'
+						name='visit Planned Parenthood.'
+					/>{' '}
 					It is a difficult decision and there is no right answer. You deserve
-					to have all the information and non-judgemental support to help you
-					make the right choice.
+					to have all the information and non-judgemental support helping you
+					make the right choice for you and your family.
 				</div>
 
 				<div className='mx-auto mt-10 w-full bg-indigo rounded p-6'>
