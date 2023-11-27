@@ -46,6 +46,7 @@ const calcQuestions: CalcQuestions[] = [
 			['24k - 75k', 0, 'lowses'],
 			['75k-121k', 0],
 			['More than 121k', 0],
+			['N/A', 0],
 		],
 	},
 	{
