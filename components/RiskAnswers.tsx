@@ -28,44 +28,75 @@ export default function RiskAnswer({ score, types }: Props) {
 	useEffect(() => {
 		const individualize = () => {
 			let responseArr = [''];
-			// parent / severe
+			// mother / severe
 			if (
-				(types.includes('mother') || types.includes('father')) &&
-				types.includes('severe')
+				types.includes('mother') &&
+				types.includes('severe') &&
+				types.includes('icu') &&
+				(types.includes('ppd') || types.includes('noppd'))
 			) {
-				responseArr.push(Blurb.parentSevere);
+				responseArr.push(Blurb.mothersevereicu);
+			} else if (types.includes('mother') && types.includes('older')) {
+				responseArr.push(Blurb.motherolder1);
+				responseArr.push(Blurb.motherolder2);
+			} else if (types.includes('mother')) {
+				responseArr.push(Blurb.mother);
 			}
-			if (types.includes('mother') && types.includes('severe')) {
-				responseArr.push(Blurb.mothersevere);
-			} else if (types.includes('mother')) responseArr.push(Blurb.mother);
 
-			if (types.includes('mildmod')) responseArr.push(Blurb.mildmod);
+			// father / older
+			if (types.includes('father') && types.includes('older')) {
+				responseArr.push(Blurb.fatherolder);
+			} else if (types.includes('father')) {
+				responseArr.push(Blurb.father);
+			}
 
+			// sibling / mod/severe
 			if (
-				!types.includes('mother') &&
-				!types.includes('father') &&
-				types.includes('severe')
-			)
-				responseArr.push(Blurb.severe);
+				types.includes('sibling') &&
+				(types.includes('severe') || types.includes('mod'))
+			) {
+				responseArr.push(Blurb.siblingmodsevere);
+			}
 
-			// insurance
-			if (types.includes('insurance')) responseArr.push(Blurb.insurance);
+			// family
+			if (types.includes('family')) {
+				responseArr.push(Blurb.family);
+			}
 
-			// old
-			if (types.includes('older')) responseArr.push(Blurb.older);
+			// employment
+			if (types.includes('employ')) {
+				responseArr.push(Blurb.employment);
+			}
 
-			// ses
-			if (types.includes('lowses')) responseArr.push(Blurb.lowses);
-			if (types.includes('midses')) responseArr.push(Blurb.midses);
+			// parent / low ses
+			if (
+				types.includes('lowses') &&
+				(types.includes('mother') || types.includes('father'))
+			) {
+				responseArr.push(Blurb.parentlowses);
+			}
 
-			// icu
-			if (types.includes('icu')) responseArr.push(Blurb.icu);
+			// severe / icu
+			if (
+				types.includes('severe') &&
+				types.includes('icu') &&
+				!types.includes('surgery')
+			) {
+				responseArr.push(Blurb.severeicu);
+			}
 
-			// surgery
-			if (types.includes('surgery')) responseArr.push(Blurb.surgery);
+			// severe/ icu / surgery
+			if (
+				types.includes('severe') &&
+				types.includes('icu') &&
+				types.includes('surgery')
+			) {
+				responseArr.push(Blurb.severeicusurgery);
+			}
 
-			// postpartum
-			if (types.includes('postpartum')) responseArr.push(Blurb.postpartum);
+			if (types.includes('fed')) {
+				responseArr.push(Blurb.breastfed);
+			}
 
 			return responseArr;
 		};
