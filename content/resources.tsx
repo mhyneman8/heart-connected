@@ -27,7 +27,7 @@ const resources: ResourceType = {
 		},
 		{
 			key: 'ohhf',
-			imgSrc: '/OHHF_logo.png',
+			imgSrc: '/logos/OHHF_logo.png',
 			width: 20,
 			height: 20,
 			link: 'https://theohhf.org/',
@@ -37,7 +37,7 @@ const resources: ResourceType = {
 		},
 		{
 			key: 'hdf',
-			imgSrc: '/hdf-logo.png',
+			imgSrc: '/logos/hdf-logo.png',
 			width: 40,
 			height: 40,
 			link: 'https://www.heartfeltdreamsfoundation.org/',
@@ -47,7 +47,7 @@ const resources: ResourceType = {
 		},
 		{
 			key: 'chf',
-			imgSrc: '/chf-logo.png',
+			imgSrc: '/logos/chf-logo.png',
 			width: 40,
 			height: 40,
 			link: 'https://www.childrensheartfoundation.org/',
@@ -57,7 +57,7 @@ const resources: ResourceType = {
 		},
 		{
 			key: 'chip',
-			imgSrc: '/chip-logo.png',
+			imgSrc: '/logos/chip-logo.png',
 			width: 20,
 			height: 20,
 			link: 'https://www.medicaid.gov/chip/index.html',
@@ -69,7 +69,7 @@ const resources: ResourceType = {
 	educ: [
 		{
 			key: 'aha',
-			imgSrc: '/aha-logo.png',
+			imgSrc: '/logos/aha-logo.png',
 			width: 20,
 			height: 20,
 			link: 'https://www.heart.org/en/health-topics/congenital-heart-defects/about-congenital-heart-defects',
@@ -78,7 +78,7 @@ const resources: ResourceType = {
 		},
 		{
 			key: 'lch',
-			imgSrc: '/lch-logo.png',
+			imgSrc: '/logos/lch-logo.png',
 			width: 20,
 			height: 20,
 			link: 'https://www.luriechildrens.org/en/specialties-conditions/complex-congenital-heart-disease-care-center/',
@@ -88,7 +88,7 @@ const resources: ResourceType = {
 		},
 		{
 			key: 'cdc',
-			imgSrc: '/cdc-logo.png',
+			imgSrc: '/logos/cdc-logo.png',
 			width: 30,
 			height: 30,
 			link: 'https://www.cdc.gov/ncbddd/heartdefects/index.html',
@@ -98,7 +98,7 @@ const resources: ResourceType = {
 		},
 		{
 			key: 'chp',
-			imgSrc: '/chp-logo.png',
+			imgSrc: '/logos/chp-logo.png',
 			width: 20,
 			height: 20,
 			link: 'https://www.chop.edu/centers-programs/cardiac-center',
@@ -108,7 +108,7 @@ const resources: ResourceType = {
 		},
 		{
 			key: 'tc',
-			imgSrc: '/tch-logo.png',
+			imgSrc: '/logos/tch-logo.png',
 			width: 20,
 			height: 20,
 			link: 'https://www.texaschildrens.org/departments/cardiology/ruby-beau',
@@ -120,7 +120,7 @@ const resources: ResourceType = {
 	therapy: [
 		{
 			key: 'dc',
-			imgSrc: '/dc-logo.png',
+			imgSrc: '/logos/dc-logo.png',
 			width: 20,
 			height: 20,
 			link: 'https://depthcounseling.org/',
@@ -130,7 +130,7 @@ const resources: ResourceType = {
 		},
 		{
 			key: 'op',
-			imgSrc: '/op-logo.png',
+			imgSrc: '/logos/op-logo.png',
 			width: 20,
 			height: 20,
 			link: 'https://openpathcollective.org/',
@@ -140,7 +140,7 @@ const resources: ResourceType = {
 		},
 		{
 			key: 'lo',
-			imgSrc: '/lo-logo.png',
+			imgSrc: '/logos/lo-logo.png',
 			width: 40,
 			height: 40,
 			link: 'https://liveoakchicago.com/',
@@ -150,7 +150,7 @@ const resources: ResourceType = {
 		},
 		{
 			key: 'hbh',
-			imgSrc: '/hbh-logo.png',
+			imgSrc: '/logos/hbh-logo.png',
 			width: 20,
 			height: 20,
 			link: 'https://howardbrown.org/service/behavioral-health/',
@@ -160,7 +160,7 @@ const resources: ResourceType = {
 		},
 		{
 			key: 'scl',
-			imgSrc: '/scl-logo.png',
+			imgSrc: '/logos/scl-logo.png',
 			width: 20,
 			height: 20,
 			link: 'https://988lifeline.org/',

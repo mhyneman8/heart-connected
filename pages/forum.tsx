@@ -55,7 +55,7 @@ export default function Forum() {
 			<Navigation />
 			<Heading
 				credit={''}
-				imgSrc={'/morepics/Together.jpg'}
+				imgSrc={'/header_imgs/Together.jpg'}
 				heading='Share, Support, Connect'
 			/>
 			<div

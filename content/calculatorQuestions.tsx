@@ -64,8 +64,8 @@ const calcQuestions: CalcQuestions[] = [
 			'Has your child/family member, or have you been told your child/family member will spend time in the ICU?',
 		questionNumber: 6,
 		choices: [
-			['no', 0],
-			['yes', 2, 'icu'],
+			['No', 0],
+			['Yes', 2, 'icu'],
 			["I don't know", 0],
 		],
 	},

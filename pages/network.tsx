@@ -15,7 +15,7 @@ export default function Network() {
 			<Navigation />
 			<Heading
 				credit={''}
-				imgSrc={'/pics/Strength_connection.jpg'}
+				imgSrc={'/header_imgs/Strength_connection.jpg'}
 				heading='Join the Heart Connected Community'
 			/>
 			<div

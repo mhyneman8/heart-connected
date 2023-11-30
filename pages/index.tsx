@@ -18,7 +18,7 @@ export default function Home() {
 			<Navigation />
 			<div className='hero h-full min-h-[70vh] max-w-[1000px] flex flex-col w-screen justify-center relative overflow-hidden'>
 				<Image
-					src='/pics/paint-heart.jpg'
+					src='/header_imgs/paint-heart.jpg'
 					fill={true}
 					alt=''
 				/>

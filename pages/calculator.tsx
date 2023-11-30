@@ -19,8 +19,8 @@ export default function Calculator() {
 
 			<Heading
 				credit={''}
-				imgSrc={'/pics/Strength_connection.jpg'}
-				heading='Trauma Response Risk Calculator'
+				imgSrc={'/header_imgs/Group-sunlight.jpg'}
+				heading='Trauma Risk Factors'
 			/>
 
 			<div

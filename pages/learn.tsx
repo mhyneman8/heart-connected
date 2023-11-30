@@ -21,7 +21,7 @@ export default function Learn() {
 			<Navigation />
 			<Heading
 				credit={''}
-				imgSrc={'/pics/Reading_Education.jpg'}
+				imgSrc={'/header_imgs/Reading_Education.jpg'}
 				heading='What is Congenital Heart Disease?'
 			/>
 

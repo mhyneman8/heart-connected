@@ -11,7 +11,7 @@ export default function About() {
 		<div className='max-w-[1000px] m-auto'>
 			<Navigation />
 			<Heading
-				imgSrc={'/mural.jpg'}
+				imgSrc={'/header_imgs/mural.jpg'}
 				heading='About Heart Connected'
 				credit={
 					'Irving Park and Francisco in the Albany Park neighborhood of Chicago. Artist: Christian Paz.'

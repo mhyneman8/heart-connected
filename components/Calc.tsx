@@ -33,9 +33,11 @@ export default function Calc({ setShowCalculator }: Props) {
 		const value = item[1] as number;
 		console.log(item);
 
-		setSelectedAnswer(value);
-		setSelectedAnswerIndex(index);
-		setSelectedAdvice(valueProp);
+		if (valueProp !== '') {
+			setSelectedAnswer(value);
+			setSelectedAnswerIndex(index);
+			setSelectedAdvice(valueProp);
+		}
 	};
 
 	const onClickNext = () => {

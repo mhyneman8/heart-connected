@@ -13,7 +13,7 @@ export default function Resources() {
 			<Navigation />
 			<Heading
 				credit={''}
-				imgSrc={'/pics/Therapy_Resources.jpg'}
+				imgSrc={'/header_imgs/Therapy_Resources.jpg'}
 				heading='Resources for Those With Congenital Heart Disease'
 			/>
 

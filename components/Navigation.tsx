@@ -23,7 +23,7 @@ export default function Navigation() {
 			<div className='flex items-center flex-shrink-0 text-white mr-6'>
 				<Link href='/'>
 					<Image
-						src='/logoqrs/Logo.png'
+						src='/logos/Logo.png'
 						width={60}
 						height={60}
 						alt='Living with CHD'

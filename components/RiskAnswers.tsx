@@ -27,7 +27,7 @@ export default function RiskAnswer({ score, types }: Props) {
 
 	useEffect(() => {
 		const individualize = () => {
-			let responseArr = [''];
+			let responseArr = [];
 			// mother / severe
 			if (
 				types.includes('mother') &&
@@ -124,7 +124,7 @@ export default function RiskAnswer({ score, types }: Props) {
 						community, along with its advocates, is here to support you every
 						step of the way!
 					</div>
-					{responseLevel[level]}
+					{/* {responseLevel[level]} */}
 					<ul className='mt-8 list-disc ml-8'>
 						{responses.map((result, index) => (
 							<li
