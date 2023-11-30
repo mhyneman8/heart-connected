@@ -80,7 +80,7 @@ const calcQuestions: CalcQuestions[] = [
 	},
 	{
 		question:
-			'For caretakers only: Have you experienced difficulties with breastfeeding your child?',
+			'For birthing parents only: Have you experienced difficulties with breastfeeding your child?',
 		questionNumber: 8,
 		choices: [
 			['Yes', 1, 'fed'],
