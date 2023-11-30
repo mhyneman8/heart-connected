@@ -16,8 +16,6 @@
 	padding: 20px;
 	position: absolute;
 	z-index: 1;
-	/* top: 80%;
-	left: 0; */
 	top: 50%;
 	left: 30%;
 	transform: translate(-50%, -5%);
@@ -25,13 +23,6 @@
 	opacity: 0;
 	transition: opacity 0.3s;
 	z-index: 30;
-}
-
-@media (max-width: 600px) {
-	/* .tooltip .tooltiptext {
-		left: -27px;
-		max-width: 260px;
-	} */
 }
 
 .tooltip:hover {

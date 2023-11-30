@@ -2,28 +2,12 @@ import Blurb from '@/content/Blurb';
 import { useEffect, useState } from 'react';
 
 type Props = {
-	score: number;
 	types: string[];
 };
 
-export default function RiskAnswer({ score, types }: Props) {
+export default function RiskAnswer({ types }: Props) {
 	const [loading, setLoading] = useState(true);
 	const [responses, setResponses] = useState<string[]>([]);
-
-	let level;
-	if (score < 9) {
-		level = 'low';
-	} else if (score < 17) {
-		level = 'moderate';
-	} else {
-		level = 'high';
-	}
-
-	const responseLevel: Record<string, string> = {
-		low: 'You are at low risk to experience a tramatic response',
-		moderate: 'You are at moderate risk to experience a tramatic response',
-		high: 'You are at moderate risk to experience a tramatic response',
-	};
 
 	useEffect(() => {
 		const individualize = () => {
@@ -63,8 +47,8 @@ export default function RiskAnswer({ score, types }: Props) {
 				responseArr.push(Blurb.family);
 			}
 
-			// employment
-			if (types.includes('employ')) {
+			// employment & not mild
+			if (types.includes('employ') && !types.includes('mild')) {
 				responseArr.push(Blurb.employment);
 			}
 
@@ -134,6 +118,42 @@ export default function RiskAnswer({ score, types }: Props) {
 								{result}
 							</li>
 						))}
+						{responses.length > 2 && (
+							<div>
+								You demonstrate multiple risk factors towards developing a
+								trauma response. Everything you have learned up to now can be
+								overwhelming and this website is designed to help you better
+								understand your child&apos;s condition and your perfectly
+								natural response to such a big diagnosis. Share this information
+								with your healthcare team, loved one&apos;s, and reach out to
+								the CHD community. It is natural to have dark and negative
+								thoughts, but you are not alone! Do not hesitate to ask
+								questions and express your feelings. There is a safe space
+								waiting for you!
+							</div>
+						)}
+
+						{responses.length > 1 && responses.length < 3 && (
+							<div>
+								You demonstrate risk factors towards developing a trauma
+								response. Everything you have learned up to now can be
+								overwhelming and this website is designed to help you better
+								understand your child&apos;s condition and your perfectly
+								natural response to such a big diagnosis. Share this information
+								with your healthcare team, loved one&apos;s, and reach out to
+								the CHD community. Do not hesitate to ask questions and express
+								your feelings. Your mental health is important!
+							</div>
+						)}
+						{responses.length < 2 && (
+							<div>
+								You demonstrate minimal risk factors towards developing a trauma
+								response, however you are still encouraged to check-in with
+								yourself and your family and utilize any resources you would
+								find helpful and join the community and unite with other
+								families with CHD.
+							</div>
+						)}
 					</ul>
 				</div>
 			)}
