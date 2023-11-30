@@ -17,7 +17,7 @@ export default function Calc({ setShowCalculator }: Props) {
 	const [activeQuestion, setActiveQuestion] = useState(0);
 	const [selectedAnswer, setSelectedAnswer] = useState(0);
 	const [selectedAdvice, setSelectedAdvice] = useState('');
-	const [previousAnswer, setPreviousAnswer] = useState<any[]>();
+	const [previousAnswer, setPreviousAnswer] = useState('');
 	const [advice, setAdvice] = useState<string[]>([]);
 
 	const questions = calcQuestions;
@@ -33,8 +33,6 @@ export default function Calc({ setShowCalculator }: Props) {
 		const valueProp = item[2] as string;
 		const value = item[1] as number;
 
-		setPreviousAnswer(item);
-
 		if (valueProp !== '') {
 			setSelectedAnswer(value);
 			setSelectedAnswerIndex(index);
@@ -43,25 +41,29 @@ export default function Calc({ setShowCalculator }: Props) {
 	};
 
 	const onClickPrevious = () => {
+		setSelectedAnswerIndex(null);
+
 		if (activeQuestion !== questions.length - 1) {
 			setActiveQuestion((prev) => prev - 1);
-		}
-		// check if advice was added last question
-		if (previousAnswer && previousAnswer.length > 2) {
-			let adviceArr = [...advice];
-			// if added remove last item
-			adviceArr.pop();
+			// check if advice was added last question
+			if (advice.includes(previousAnswer)) {
+				let arr = advice;
+				arr.splice(arr.indexOf(previousAnswer), 1)
+				setAdvice(arr);
+			}
 		}
 
-		// setSelectedAnswerIndex(null);
-		if (selectedAdvice !== undefined) setAdvice([...advice, selectedAdvice]);
-		if (activeQuestion !== questions.length - 1) {
-		}
 	};
 
 	const onClickNext = () => {
 		setSelectedAnswerIndex(null);
-		if (selectedAdvice !== undefined) setAdvice([...advice, selectedAdvice]);
+		if (selectedAdvice !== undefined) {
+			setAdvice([...advice, selectedAdvice]);
+			setPreviousAnswer(selectedAdvice);
+		} else {
+			setPreviousAnswer('');
+		}
+
 		if (activeQuestion !== questions.length - 1) {
 			setActiveQuestion((prev) => prev + 1);
 		} else {
@@ -70,13 +72,13 @@ export default function Calc({ setShowCalculator }: Props) {
 		}
 	};
 
-	const startOver = () => {
-		setSelectedAnswerIndex(null);
-		setActiveQuestion(0);
-		setSelectedAnswer(0);
-		setShowResult(false);
-		setAdvice([]);
-	};
+	// const startOver = () => {
+	// 	setSelectedAnswerIndex(null);
+	// 	setActiveQuestion(0);
+	// 	setSelectedAnswer(0);
+	// 	setShowResult(false);
+	// 	setAdvice([]);
+	// };
 
 	const handleClose = () => {
 		document.querySelector('body')!.style.overflow = 'auto';
