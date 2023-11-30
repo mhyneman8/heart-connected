@@ -5,6 +5,7 @@ export default function Document() {
 		<Html
 			lang='en'
 			style={{ overflowX: 'hidden' }}
+			title='Heart Connected'
 		>
 			<Head />
 			<body>

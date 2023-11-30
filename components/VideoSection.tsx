@@ -17,7 +17,7 @@ export default function VideoSection() {
 	const videoBoxStyles =
 		'h-72 w-full max-w-sm relative video items-center flex justify-center text-center m-auto mb-5 hover:cursor-pointer';
 	const textBoxStyles =
-		'h-72 w-full z-20 max-w-sm flex-col bg-teal flex text-4xl text-white rounded-lg justify-center items-center px-4 text-center m-auto hover:opacity-0 transition ease-in-out duration-500 bg-teal absolute top-0';
+		'h-72 w-full z-20 max-w-sm flex-col bg-teal flex text-4xl text-black rounded-lg justify-center items-center px-4 text-center m-auto hover:opacity-0 transition ease-in-out duration-500 bg-teal absolute top-0';
 	return (
 		<>
 			{showVideo0 && (
