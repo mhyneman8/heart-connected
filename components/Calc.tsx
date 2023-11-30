@@ -118,7 +118,7 @@ export default function Calc({ setShowCalculator }: Props) {
 								className='border px-4 py-1 float-right rounded-full hover:bg-slate-200'
 								onClick={() => onClickPrevious()}
 							>
-								Previous question
+								Go Back
 							</button>
 						)}
 
