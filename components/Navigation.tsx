@@ -80,7 +80,7 @@ export default function Navigation() {
 						href='/calculator'
 						className={desktopItemsStyle}
 					>
-						Determine Trauma Response Risk
+						Trauma Risk Factors
 					</Link>
 				</div>
 				<div>
@@ -127,7 +127,7 @@ export default function Navigation() {
 							href='/calculator'
 							className={mobileItemStyle}
 						>
-							Determine Trauma Response Risk
+							Trauma Risk Factors
 						</Link>
 					</div>
 					<div>

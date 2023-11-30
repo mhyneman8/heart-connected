@@ -17,7 +17,7 @@ const overview: Overview[] = [
 	{
 		title: 'Outflow Tract Development: ',
 		content:
-			'Examine the formation of outflow tracts like the aorta and pulmonary arteries, and how defects such as transposition of the great arteries (TGA), double outlet right ventricle (DORV), and Pulmonary Atresia can affect heart development at this stage.',
+			'Examine the formation of outflow tracts like the aorta and pulmonary arteries, and how defects such as transposition of the great arteries (TGA), double outlet right ventricle (DORV), and pulmonary atresia can affect heart development at this stage.',
 	},
 ];
 

@@ -6,7 +6,7 @@ import styles from '../components/styles.module.css';
 
 export default function Calculator() {
 	const [showCalculator, setShowCalculator] = useState(false);
-	const paragraphStyles = 'mb-3';
+	const paragraphStyles = 'mb-3 indent-6';
 
 	const handleCalcOpen = () => {
 		setShowCalculator(true);
@@ -28,21 +28,32 @@ export default function Calculator() {
 				className='body px-10 mt-[-20px] max-w-[900px] mb-20 flex justify-center flex-col m-auto'
 			>
 				<div className={paragraphStyles}>
-					Our goal is to develop a risk assessment tool that will help you and
-					your healthcare providers identify the right resources for your unique
-					situation that will influence your experience with the most common
-					group of defects present at the birth of your child. In time, this
-					risk assessment will be able to lighten at least some of the struggles
-					that are often experienced when taking care of a child with CHD
+					Our goal is to help you identify individual characteristics that put
+					you at increased risk for a trauma-related response, including
+					anxiety, depression, and somatization (physical symptoms related to
+					distress). Here you will use a tool that pulls from all the latest
+					research related to mental and physical responses following a
+					traumatic experience to help you better understand your likelihood of
+					developing a trauma response. It is our hope that, by utilizing this
+					tool, we can help you and your healthcare team recognize and respond
+					to your individual risk factors.
 				</div>
 				<div className={paragraphStyles}>
-					The calculator is provided is not a validated tool and is for
-					informational purposes only. Do not substitute this information for
-					professional medical or psychological counseling, diagnosis, or
-					treatment. It is designed to offer a rough estimate of potential risk
-					factors related to trauma response following a CHD diagnosis. Users of
-					the calculator understand and acknowledge that they are using it at
-					their own discretion and risk.
+					The tool provided is not scientifically validated and is for
+					informational purposes only. There has yet to be research identifying
+					the strength of the risk factors in the calculator, therefore
+					attempting to determine overall risk stratification with these
+					characteristics is not appropriate. Do not substitute this information
+					for professional medical or psychological counseling, diagnosis, or
+					treatment. It is designed to provide you and your healthcare team
+					evidence-based guidance towards knowing what personal traits expose
+					you to a greater risk to a trauma response following the disclosure of
+					your child&apos;s CHD diagnosis. As a warning, this information could
+					worsen your mental state if you are sensitive to potentially upsetting
+					news. By using this tool, you understand and acknowledge that you are
+					using this assessment tool at their own discretion and risk. We
+					encourage you to talk with your healthcare and loved ones prior to
+					accessing the below tool.
 				</div>
 				<div className={paragraphStyles}>
 					<span className='font-bold'>
@@ -53,7 +64,9 @@ export default function Calculator() {
 					Users should not interpret the results of the calculator as a
 					definitive assessment of their condition or the condition of their
 					child. Any concerns or questions regarding health or mental health
-					should be discussed with qualified healthcare professionals.
+					should be discussed with qualified healthcare professionals with
+					personal knowledge of you and your child&apos;s diagnosis and care
+					plan.
 				</div>
 				<div className={paragraphStyles}>
 					<div className='font-bold mt-8'>Limitations of the calculator:</div>
@@ -97,6 +110,7 @@ export default function Calculator() {
 					The purpose of such a calculator would be to provide a rough estimate
 					rather than a definitive assessment.
 				</div>
+				{/* {citations} */}
 			</div>
 		</div>
 	);
