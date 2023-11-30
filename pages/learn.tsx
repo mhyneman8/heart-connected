@@ -248,7 +248,7 @@ export default function Learn() {
 				<ol className='list-decimal m-20 text-xs'>
 					<li>
 						Buijtendijk MFJ, Barnett P, van den Hoff MJB. Development of the
-						human heart. American Journal of Medical Genetics. 2020; 184(1):7-22
+						human heart. <span className='italic'>American Journal of Medical Genetics</span>. 2020; 184(1):7-22
 					</li>
 				</ol>
 			</div>

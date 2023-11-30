@@ -2,7 +2,8 @@ import Heading from '@/components/Heading';
 import Navigation from '@/components/Navigation';
 import Calc from '@/components/Calc';
 import { useState } from 'react';
-import styles from '../components/styles.module.css';
+import styles from '@/components/styles.module.css';
+import citations from '@/content/citations';
 
 export default function Calculator() {
 	const [showCalculator, setShowCalculator] = useState(false);
@@ -111,6 +112,17 @@ export default function Calculator() {
 					rather than a definitive assessment.
 				</div>
 				{/* {citations} */}
+				<div className='font-bold text-xl mt-7'>Citations</div>
+				
+				<ol className='list-decimal'>
+					{citations.map((item, index) => (
+						<div key={index}>
+							<li className='mt-4 mx-10 text-sm'>
+								<div className='inline'>{item.main}<span className='italic'>{item.italic}</span>{item.dates}</div>
+							</li>
+						</div>
+					))}
+				</ol>
 			</div>
 		</div>
 	);
