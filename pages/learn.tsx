@@ -29,7 +29,7 @@ export default function Learn() {
 				<h3 className='font-bold mb-6 text-center'>
 					Structural{' '}
 					<Tooltip
-						image='/heartpics/Normal.jpg'
+						image='/heart_learn_pics/Normal.jpg'
 						imgAlt=''
 						text='The anatomical heart consists of four chambers. The upper chambers, or atria, which receive blood from the body and lungs; and the lower chambers, or ventricles, which send blood to the body and the lungs. The heart functions as the pump and connection between these two different systems to obtain oxygen from the lungs and deliver it to all the other organs, like the brain, stomach, kidneys, and more. In normal anatomy, the right atrium receives blood from the body and directs it to the right ventricle which sends blood via the pulmonary arteries to the lungs for oxygenation. The left atrium receives oxygen-rich blood, directing it to the left ventricle which sends the blood via the aorta to the rest of the body.'
 					>
@@ -70,7 +70,7 @@ export default function Learn() {
 						cardiac lesion, called{' '}
 						<Tooltip
 							text='Totally anomalous pulmonary venous return (TAPVR) is a lesion that results from inappropriate placement of the pulmonary veins (vessels returning blood to the left atrium). The severity of this defect depends on the attachment of the veins, as they can fuse to the vena cava (the large vein returning blood to the right atrium), either above or below the heart, or to a different chamber of the heart itself.'
-							image='/heartpics/TAPVR.jpg'
+							image='/heart_learn_pics/TAPVR.jpg'
 							imgAlt=''
 						>
 							TAPVR (totally anomalous pulmonary venous return),
@@ -91,9 +91,9 @@ export default function Learn() {
 					septal defects (
 					<Tooltip
 						text='Septal, or wall, defects can form between either the atria (ASD) or the ventricles (VSD). These lesions, if isolated, are generally less severe, but still result in shunting (misdirected blood flow).'
-						image='/heartpics/ASD.jpg'
+						image='/heart_learn_pics/ASD.jpg'
 						imgAlt=''
-						image2='/heartpics/VSD.jpg'
+						image2='/heart_learn_pics/VSD.jpg'
 						img2Alt=''
 					>
 						ASD and VSD
@@ -103,7 +103,7 @@ export default function Learn() {
 				<p className={paraStyles}>
 					While these defects are usually considered non-severe (or acyanotic),{' '}
 					<Tooltip
-						image='/heartpics/TOF.jpg'
+						image='/heart_learn_pics/TOF.jpg'
 						imgAlt=''
 						text='Tetralogy of Fallot is a lesion that, while complex with 4 identifiable features, can simply be thought of as  a ventricular septal defect which formed from a ventricular septum that pushed into the right ventricle. This inappropriate placement leads to the other 3 distinguishing features. It pushes the aorta into the right ventricle causing pulmonary artery stenosis (narrowing) and straining the right ventricle resulting in hypertrophy (enlargement)'
 					>
@@ -117,10 +117,10 @@ export default function Learn() {
 					outflow tracts (i.e., aorta and pulmonary arteries) develop and this
 					is where defects including{' '}
 					<Tooltip
-						image='/heartpics/TGA.jpg'
+						image='/heart_learn_pics/TGA.jpg'
 						imgAlt=''
 						text='Transposition of the great arteries is a severe lesion that occurs when the aorta (leads to body) and the pulmonary artery (leads to lungs) are attached to the wrong ventricle.This means the body and the lungs circulations are separated from each other and oxygen-rich blood cannot reach other organs. There are other types of TGA, which sees the ventricles transposed while the arteries are in appropriate placement, and while this sounds better it can lead to its own host of issues.'
-						image2='/heartpics/DORV.jpg'
+						image2='/heart_learn_pics/DORV.jpg'
 						img2Alt=''
 						text2='Double outlet right ventricle (DORV) is a condition where both the pulmonary arteries and aorta are connected to the right ventricle. This can occur with under-development of the left ventricle, inappropriate alignment of the interventricular wall, or a reduced pulmonary artery size.'
 					>
@@ -136,7 +136,7 @@ export default function Learn() {
 					valves form. Valve formation defects include{' '}
 					<Tooltip
 						text="Ebstein's anomaly is a malformation of the tricuspid valve (connection between the right atrium and ventricle). Its large and inappropriate formation and alignment leads to backwards flow causing inefficient circulation into and through the pulmonary vessels."
-						image='/heartpics/Ebstein.jpg'
+						image='/heart_learn_pics/Ebstein.jpg'
 						imgAlt=''
 					>
 						Ebstein&apos;s anomaly{' '}
@@ -192,14 +192,14 @@ export default function Learn() {
 						</div>
 						<div className='z-10 justify-center align-center flex'>
 							<Image
-								src='/tetralogy.png'
+								src='/video_stills/tetralogy.png'
 								width={284}
 								height={100}
 								alt='Congenital Heart Defects Explained: Tetralogy of Fallot'
 								className='rounded-lg'
 							/>
 							<Image
-								src='/play.png'
+								src='/video_stills/play.png'
 								width={100}
 								height={100}
 								alt=''
@@ -224,14 +224,14 @@ export default function Learn() {
 						</div>
 						<div className="z-10 justify-center align-center flex'">
 							<Image
-								src='/development.png'
+								src='/video_stills/development.png'
 								width={384}
 								height={200}
 								alt='Development of the ventricles and large arterial vessels'
 								className='rounded-lg'
 							/>
 							<Image
-								src='/play.png'
+								src='/video_stills/play.png'
 								width={100}
 								height={100}
 								alt=''
