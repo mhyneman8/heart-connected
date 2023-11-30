@@ -20,7 +20,7 @@ export default function Navigation() {
 			>
 				Skip Navigation
 			</a>
-			<div className='flex items-center flex-shrink-0 text-white mr-6'>
+			<div className='flex items-center flex-shrink-0 text-white mr-6 hover:cursor-pointer'>
 				<Link href='/'>
 					<Image
 						src='/logos/Logo.png'
