@@ -125,7 +125,7 @@ export default function RiskAnswer({ types }: Props) {
 								overwhelming and this website is designed to help you better
 								understand your child&apos;s condition and your perfectly
 								natural response to such a big diagnosis. Share this information
-								with your healthcare team, loved one&apos;s, and reach out to
+								with your healthcare team, loved ones, and reach out to
 								the CHD community. It is natural to have dark and negative
 								thoughts, but you are not alone! Do not hesitate to ask
 								questions and express your feelings. There is a safe space

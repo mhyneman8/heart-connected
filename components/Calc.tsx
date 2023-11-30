@@ -98,12 +98,15 @@ export default function Calc({ setShowCalculator }: Props) {
 					<div className='mt-8'>
 						<RiskAnswer types={advice} />
 						<div className='w-full flex justify-center items-center mt-10 mb-5'>
-							<button
+							<button className={styles.primaryBtn} onClick={() => handleClose()}>
+								Close
+							</button>
+							{/* <button
 								className={styles.primaryBtn}
 								onClick={() => startOver()}
 							>
 								Start Over
-							</button>
+							</button> */}
 						</div>
 					</div>
 				) : (
