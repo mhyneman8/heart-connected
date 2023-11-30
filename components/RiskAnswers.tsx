@@ -96,7 +96,7 @@ export default function RiskAnswer({ types }: Props) {
 	return (
 		<div>
 			{loading ? (
-				<div>Calculating Your Risk Factors...</div>
+				<div className='text-center m-auto'>Calculating Your Risk Factors...</div>
 			) : (
 				<div>
 					<div>

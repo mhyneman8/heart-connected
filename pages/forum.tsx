@@ -92,7 +92,7 @@ export default function Forum() {
 							Forums
 						</div>
 						{loading ? (
-							<div className='mx-auto w-3/4'>
+							<div className='mx-auto text-center text-bold text-3lg mt-5 w-3/4'>
 								<h2>Loading...</h2>
 							</div>
 						) : forums.length === 0 ? (
