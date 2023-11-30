@@ -62,7 +62,7 @@ export default function VideoSection() {
 									className='rounded-lg'
 								/>
 								<Image
-									src='/play.png'
+									src='/video_stills/play.png'
 									width={100}
 									height={100}
 									alt=''
