@@ -49,11 +49,8 @@ export default function Calc({ setShowCalculator }: Props) {
 		// check if advice was added last question
 		if (previousAnswer && previousAnswer.length > 2) {
 			let adviceArr = [...advice];
-			console.log('advice state', adviceArr);
 			// if added remove last item
 			adviceArr.pop();
-			console.log('after pop', adviceArr);
-			setActiveQuestion((prev) => prev - 1);
 		}
 
 		// setSelectedAnswerIndex(null);
