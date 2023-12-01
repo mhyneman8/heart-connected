@@ -24,14 +24,14 @@ export default function Network() {
 			>
 				{showModal && <NetworkModal setShowModal={setShowModal} />}
 
-				<div className='h6 w-3/4 m-auto mb-8 text-lg'>
+				<div className='h6 md:w-3/4 sm:11/12 m-auto mb-8 indent-6'>
 					Heart Connected is a community built to form strong connections
 					between families who are living with Congenital Heart Disease. There
 					is no better support for folks who are impacted with CHD than others
 					who have experienced the journey themselves or through a family
 					member.
 				</div>
-				<div className='h6 w-3/4 m-auto mb-8 text-lg'>
+				<div className='h6 md:w-3/4 sm:11/12 m-auto mb-8 indent-6'>
 					Whether you are a person living with Congenital Heart Disease or you
 					love someone who does, we&apos;d love to have you as a valued member
 					of our community. You&apos;ll be connected to others just like you who
@@ -47,9 +47,9 @@ export default function Network() {
 						Join Our Community
 					</button>
 				</div>
-				<div className='h6 w-3/4 m-auto mb-8 text-lg'>
+				<div className='h6 md:w-3/4 sm:11/12 m-auto mb-8'>
 					<div className='font-bold'>Why You Should Join Us: </div>
-					<div>
+					<div className='indent-6 '>
 						A strong, interconnected community has shown to be a protective
 						factor against developing a trauma related symptoms. Symptoms that
 						can have a profound impact impact on our, as parents, mental health.
