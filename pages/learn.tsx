@@ -246,7 +246,7 @@ export default function Learn() {
 			</div>
 			<div id='citation'>
 				<div className='font-bold text-xl mt-7 text-center mb-3'>Citations</div>
-				<ol className='list-decimal text-xs mx-8 mb-10'>
+				<ol className='list-decimal text-xs mx-auto mb-10 max-w-[500px] flex justify-center'>
 					<li>
 						Buijtendijk MFJ, Barnett P, van den Hoff MJB. Development of the
 						human heart.{' '}
