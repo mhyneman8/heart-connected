@@ -40,7 +40,7 @@ export default function Home() {
 				id='body'
 				className='missionSection flex justify-center flex-col'
 			>
-				<div className='mission'>
+				<div className='mission flex items-center flex-col'>
 					<div className='heading h2 w-100 m-auto md:text-6xl text-4xl mt-10 mb-8 text-center'>
 						Our Mission
 					</div>
