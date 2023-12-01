@@ -86,7 +86,7 @@ export default function Navigation() {
 				<div>
 					<Link
 						href='/network'
-						className='inline-block text-sm no-underline px-4 py-2 leading-none border rounded text-white border-white hover:bg-purple  mt-4 lg:mt-0'
+						className='inline-block text-sm no-underline px-4 py-2 leading-none border rounded-full text-white border-white hover:bg-purple  mt-4 lg:mt-0'
 					>
 						Join Our Community
 					</Link>
@@ -133,7 +133,7 @@ export default function Navigation() {
 					<div>
 						<Link
 							href='/network'
-							className='inline-block no-underline text-sm px-4 py-2 leading-none border rounded text-white border-white hover:bg-purple mt-8'
+							className='inline-block no-underline text-sm px-4 py-2 leading-none border rounded-full text-white border-white hover:bg-purple mt-8'
 						>
 							Join Our Community
 						</Link>
