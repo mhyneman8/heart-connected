@@ -24,17 +24,17 @@ export default function About() {
 				{aboutContent.map((section, index) => (
 					<div
 						key={index}
-						className='m-auto w-4/5 mt-8'
+						className='m-auto md:w-9/12 sm:w-11/12  mb-8'
 					>
 						<div className='font-bold text-4xl mb-5'>{section.heading}</div>
-						<div>{section.content}</div>
+						<div className='indent-6'>{section.content}</div>
 					</div>
 				))}
 
 				<div className='flex flex-col justify-center'>
 					{showModal && <NetworkModal setShowModal={setShowModal} />}
-					<div className='h2 w-3/4 m-auto text-5xl mt-12 mb-8'>
-						Connect with a family like yours
+					<div className='h2 w-3/4 m-auto text-4xl mt-12 mb-8'>
+						Connect with a family like yours today
 					</div>
 					<button
 						className='text-white font-bold px-8 py-3 rounded-full m-auto w-fit bg-cyan shadow hover:shadow-lg outline-none focus:outline-none my-4'

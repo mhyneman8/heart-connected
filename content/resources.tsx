@@ -33,7 +33,7 @@ const resources: ResourceType = {
 			link: 'https://theohhf.org/',
 			text: 'Ollie Hinkle Heart Foundation',
 			description:
-				'A foundation created by a parents affected by CHD for families affected by CHD. Their mission is to address unmet needs, including financial assistance, mental health resources and community support across the US. Whether you are looking for help with your current experience or are interested in giving back through financial support or community engagement the is a fantastic organization to look into to.',
+				'A foundation created by a parents affected by CHD for families affected by CHD. Their mission is to address unmet needs, including financial assistance, mental health resources and community support across the US. Whether you are looking for help with your current experience or are interested in giving back through financial support or community engagement the A fantastic organization to look into to.',
 		},
 		{
 			key: 'hdf',
@@ -126,7 +126,7 @@ const resources: ResourceType = {
 			link: 'https://depthcounseling.org/',
 			text: 'Depth Counseling',
 			description:
-				'is an organization that provides licensed therapy services in Austin, TX and Chicago, IL and specializes in anxiety and depression with the ability to focus on trauma related counseling. They provide therapy to both the insured and on a sliding-scale, as well.',
+				'An organization that provides licensed therapy services in Austin, TX and Chicago, IL and specializes in anxiety and depression with the ability to focus on trauma related counseling. They provide therapy to both the insured and on a sliding-scale, as well.',
 		},
 		{
 			key: 'op',
@@ -136,7 +136,7 @@ const resources: ResourceType = {
 			link: 'https://openpathcollective.org/',
 			text: 'Open Path',
 			description:
-				'Open Path is a national nonprofit collective of licensed therapist who aim to provide affordable therapy to those underinsured or without insurance. They charge between $40-70 per session after a one-time lifetime membership fee.',
+				'A national nonprofit collective of licensed therapist who aim to provide affordable therapy to those underinsured or without insurance. They charge between $40-70 per session after a one-time lifetime membership fee.',
 		},
 		{
 			key: 'lo',
@@ -146,7 +146,7 @@ const resources: ResourceType = {
 			link: 'https://liveoakchicago.com/',
 			text: 'Live Oak',
 			description:
-				'is a Chicago-based organization that aims to provide sustainable, quality counseling services on a sliding-scale with a minimum of $35 per session, whether it is with a licensed counselor or a graduate intern. They strive to practice trauma-informed care and also service individuals with insurance.',
+				'A Chicago-based organization that aims to provide sustainable, quality counseling services on a sliding-scale with a minimum of $35 per session, whether it is with a licensed counselor or a graduate intern. They strive to practice trauma-informed care and also service individuals with insurance.',
 		},
 		{
 			key: 'hbh',
@@ -156,7 +156,7 @@ const resources: ResourceType = {
 			link: 'https://howardbrown.org/service/behavioral-health/',
 			text: 'Howard Brown Health',
 			description:
-				'is a Chicago-based health service partner providing sliding-scale services with an approach to incorporate primary care services to promote improved overall health. They offer psychiatric care and behavioral counseling with a focus on trauma informed care.',
+				'A Chicago-based health service partner providing sliding-scale services with an approach to incorporate primary care services to promote improved overall health. They offer psychiatric care and behavioral counseling with a focus on trauma informed care.',
 		},
 		{
 			key: 'scl',
@@ -166,7 +166,7 @@ const resources: ResourceType = {
 			link: 'https://988lifeline.org/',
 			text: 'Suicide Crisis Lifeline ',
 			description:
-				'is a national hotline with 24/7 coverage for those in need of support who are experiencing suicidal thoughts. Click the link or call 9-8-8 to get access to a trained crisis worker.',
+				'A national hotline with 24/7 coverage for those in need of support who are experiencing suicidal thoughts. Click the link or call 9-8-8 to get access to a trained crisis worker.',
 		},
 	],
 };

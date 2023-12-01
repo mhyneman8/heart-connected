@@ -111,14 +111,18 @@ export default function Calculator() {
 					The purpose of such a calculator would be to provide a rough estimate
 					rather than a definitive assessment.
 				</div>
-				{/* {citations} */}
+
 				<div className='font-bold text-xl mt-7'>Citations</div>
-				
+
 				<ol className='list-decimal'>
 					{citations.map((item, index) => (
 						<div key={index}>
 							<li className='mt-4 mx-10 text-sm'>
-								<div className='inline'>{item.main}<span className='italic'>{item.italic}</span>{item.dates}</div>
+								<div className='inline'>
+									{item.main}
+									<span className='italic'>{item.italic}</span>
+									{item.dates}
+								</div>
 							</li>
 						</div>
 					))}

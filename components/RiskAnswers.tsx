@@ -96,11 +96,13 @@ export default function RiskAnswer({ types }: Props) {
 	return (
 		<div>
 			{loading ? (
-				<div className='text-center m-auto'>Calculating Your Risk Factors...</div>
+				<div className='text-center m-auto'>
+					Calculating Your Risk Factors...
+				</div>
 			) : (
 				<div>
 					<div>
-						You&apos;ve started or will soon begin, the journey of parenting a
+						You&apos;ve started or will soon begin, the journey of supporting a
 						child with CHD, which can be daunting. Your presence here reflects
 						your strength to confront challenges and create positive change for
 						both you and your family. Regardless of which path you choose or
@@ -118,6 +120,8 @@ export default function RiskAnswer({ types }: Props) {
 								{result}
 							</li>
 						))}
+					</ul>
+					<div className='mt-6 border-t pt-4'>
 						{responses.length > 2 && (
 							<div>
 								You demonstrate multiple risk factors towards developing a
@@ -125,11 +129,10 @@ export default function RiskAnswer({ types }: Props) {
 								overwhelming and this website is designed to help you better
 								understand your child&apos;s condition and your perfectly
 								natural response to such a big diagnosis. Share this information
-								with your healthcare team, loved ones, and reach out to
-								the CHD community. It is natural to have dark and negative
-								thoughts, but you are not alone! Do not hesitate to ask
-								questions and express your feelings. There is a safe space
-								waiting for you!
+								with your healthcare team, loved ones, and reach out to the CHD
+								community. It is natural to have dark and negative thoughts, but
+								you are not alone! Do not hesitate to ask questions and express
+								your feelings. There is a safe space waiting for you!
 							</div>
 						)}
 
@@ -154,7 +157,7 @@ export default function RiskAnswer({ types }: Props) {
 								families with CHD.
 							</div>
 						)}
-					</ul>
+					</div>
 				</div>
 			)}
 		</div>

@@ -44,7 +44,7 @@ export default function Home() {
 					<div className='heading h2 w-100 m-auto md:text-6xl text-4xl mt-10 mb-8 text-center'>
 						Our Mission
 					</div>
-					<div className='body w-3/4 m-auto mb-8 text-lg para'>
+					<div className='body md:w-9/12 sm:w-11/12 mb-2 para'>
 						The goal of Heart Connected is to provide community, education and
 						support for those with congenital heart diseases and their loved
 						ones. Founded by medical professionals who are passionate about all
@@ -61,12 +61,12 @@ export default function Home() {
 				</div>
 				<VideoSection />
 
-				<div className='cta w-full text-center my-12'>
+				<div className='cta w-full text-center my-8'>
 					{showModal && <NetworkModal setShowModal={setShowModal} />}
 					<div className='h2 w-3/4 m-auto md:text-5xl text-4xl mt-12 mb-8'>
 						Connect With A Family Like Yours
 					</div>
-					<div className='h6 w-3/4 m-auto mb-8 text-lg text-left para'>
+					<div className='md:w-9/12 sm:w-11/12 m-auto mb-8 text-left para'>
 						Join our community of families facing similar experiences. Share
 						support, insights, and join a network of people who understand what
 						you&apos;re going through. By providing your email and city,

@@ -32,8 +32,8 @@ export default function Resources() {
 						href='/learn'
 					>
 						view our learn page
-					</Link>
-					or a brief overview of expected heart development and when various
+					</Link>{' '}
+					for a brief overview of expected heart development and when various
 					defects frequently develop. After you have received the diagnosis you
 					will also be referred to a pediatric heart specialist, they are an
 					invaluable resource and you should never hesitate to reach out to your

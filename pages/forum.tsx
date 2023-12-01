@@ -66,14 +66,14 @@ export default function Forum() {
 					className='flex flex-col justify-center m-auto max-w-[1000px] w-11/12'
 					id='forum'
 				>
-					<div className='para mb-10 w-9/12 text-base m-auto'>
+					<div className='para mb-10 md:w-9/12 sm:w-11/12  text-base m-auto'>
 						Welcome to our Heart Connected forum, a dedicated space for families
 						navigating the journey of a congenital heart disease (CHD)
 						diagnosis. Here, we come together as a supportive community to share
 						experiences, offer guidance, and foster connections that transcend
 						the challenges posed by CHD.
 					</div>
-					<div className='para mb-10 w-9/12 text-base m-auto'>
+					<div className='para mb-10 md:w-9/12 sm:w-11/12  text-base m-auto'>
 						In this compassionate environment, we embrace the strength that
 						comes from unity, understanding, and the collective wisdom of
 						families who have walked similar paths. Whether you&apos;re seeking
@@ -84,7 +84,7 @@ export default function Forum() {
 						unwavering strength found in the heartfelt bonds we share.
 					</div>
 					<div
-						className='flex flex-col mx-auto w-full justify-center mb-6'
+						className='flex flex-col mx-auto w-full justify-center mb-6 max-w-[900px]'
 						id='accordion-collapse'
 						data-accordion='collapse'
 					>
@@ -116,7 +116,6 @@ export default function Forum() {
 						<div className='m-auto w-3/4 mt-5 flex flex-col justify-center'>
 							<form
 								onSubmit={addForum}
-								// onClick={(e) => addForum(e)}
 								className='m-auto flex flex-col justify-center'
 							>
 								<label

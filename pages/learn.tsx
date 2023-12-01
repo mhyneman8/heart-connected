@@ -216,7 +216,7 @@ export default function Learn() {
 					</button>
 				</div>
 			</div>
-			<div className='video-wrapper flex flex-col justify-center lg:flex-row mb-20 mt-20'>
+			<div className='video-wrapper flex flex-col justify-center lg:flex-row mb-10 mt-20'>
 				<div className={videoBoxStyles}>
 					<button onClick={() => setShowVideo2(true)}>
 						<div className={textBoxStyles}>
@@ -245,10 +245,13 @@ export default function Learn() {
 				</div>
 			</div>
 			<div id='citation'>
-				<ol className='list-decimal m-20 text-xs'>
+				<div className='font-bold text-xl mt-7 text-center mb-3'>Citations</div>
+				<ol className='list-decimal text-xs mx-8 mb-10'>
 					<li>
 						Buijtendijk MFJ, Barnett P, van den Hoff MJB. Development of the
-						human heart. <span className='italic'>American Journal of Medical Genetics</span>. 2020; 184(1):7-22
+						human heart.{' '}
+						<span className='italic'>American Journal of Medical Genetics</span>
+						. 2020; 184(1):7-22
 					</li>
 				</ol>
 			</div>
